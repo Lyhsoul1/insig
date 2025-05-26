@@ -2,124 +2,75 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Calculadora de Level e Vida - Calculadora de Bônus</title>
+  <title>Menu Principal - Calculadora de Bônus</title>
   <style>
     body {
       background: #0d1117;
       color: #f0f0f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 30px 20px;
-      max-width: 700px;
-      margin: auto;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
     }
     h1 {
       color: #58a6ff;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      font-weight: 900;
+      text-shadow: 0 0 10px #58a6ff;
     }
-    label {
-      display: block;
-      margin-top: 20px;
-    }
-    input[type=number] {
-      padding: 8px 12px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: none;
-      margin-top: 5px;
+    .btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      max-width: 700px;
       width: 100%;
-      max-width: 200px;
     }
-    button {
-      margin-top: 30px;
+    a.button {
       background: #238636;
       color: white;
-      border: none;
-      padding: 14px 28px;
-      font-weight: bold;
-      font-size: 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 0 10px #2ea043;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background: #2ea043;
-    }
-    .result {
-      margin-top: 30px;
-      font-size: 20px;
-      background: #161b22;
-      padding: 15px;
-      border-radius: 8px;
-    }
-    a {
-      color: #58a6ff;
       text-decoration: none;
-      font-size: 14px;
-      display: inline-block;
-      margin-top: 40px;
+      padding: 20px 40px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      box-shadow: 0 0 10px #2ea043;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      flex: 1 1 250px;
+      text-align: center;
+      user-select: none;
     }
-    a:hover {
-      text-decoration: underline;
+    a.button:hover {
+      background: #2ea043;
+      box-shadow: 0 0 15px #2ea043;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
 
-  <h1>Calculadora de Level e Vida</h1>
+  <h1>Calculadora de Bônus</h1>
 
-  <label for="level">Digite seu level:</label>
-  <input type="number" id="level" min="1" max="999" value="100" />
+  <div class="btn-container">
+    <a href="addons.html" class="button" aria-label="Calculadora de Addons">Addons</a>
+    <a href="mounts.html" class="button" aria-label="Calculadora de Montarias">Montarias</a>
+    <a href="calc_skill_training.html" class="button" aria-label="Calculadora de Skill">Skill</a>
+    <a href="calc_level_exp.html" class="button" aria-label="Calculadora de Level">Level</a>
+  </div>
 
-  <label for="baseHealth">Vida base (sem bônus):</label>
-  <input type="number" id="baseHealth" min="1" value="200" />
-
-  <label for="bonusPercent">Bônus de vida (%):</label>
-  <input type="number" id="bonusPercent" min="0" value="0" />
-
-  <button onclick="calcularVida()">Calcular Vida Total</button>
-
-  <div class="result" id="resultado"></div>
-
-  <a href="index.html">&larr; Voltar ao menu principal</a>
-
-  <script>
-    // Exemplo simples: Vida total = vida base + bônus percentual
-    // Também mostra uma estimativa de HP baseado no level (fórmula genérica)
-    function calcularVida() {
-      const level = parseInt(document.getElementById('level').value);
-      const baseHealth = parseInt(document.getElementById('baseHealth').value);
-      const bonusPercent = parseFloat(document.getElementById('bonusPercent').value);
-
-      if (isNaN(level) || level < 1) {
-        alert('Informe um level válido.');
-        return;
-      }
-      if (isNaN(baseHealth) || baseHealth < 1) {
-        alert('Informe uma vida base válida.');
-        return;
-      }
-      if (isNaN(bonusPercent) || bonusPercent < 0) {
-        alert('Informe um bônus percentual válido.');
-        return;
-      }
-
-      // Vida total = baseHealth + (baseHealth * bonusPercent / 100)
-      const vidaTotal = baseHealth + (baseHealth * bonusPercent / 100);
-
-      // Exemplo: Vida base pode aumentar com level
-      // Vamos supor +5 HP por level (exemplo genérico)
-      const vidaPorLevel = level * 5;
-
-      const vidaFinal = vidaTotal + vidaPorLevel;
-
-      document.getElementById('resultado').innerHTML = `
-        Para level <strong>${level}</strong>,<br />
-        com vida base <strong>${baseHealth}</strong> e bônus de <strong>${bonusPercent}%</strong>,<br />
-        sua vida total estimada será: <strong>${Math.round(vidaFinal)}</strong> HP.
-      `;
-    }
-  </script>
+  <footer>
+    &copy; 2025 - Sua Calculadora de Bônus
+  </footer>
 
 </body>
 </html>
