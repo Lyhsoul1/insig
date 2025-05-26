@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Calculadora de Treino de Skill</title>
+  <meta charset="UTF-8" />
+  <title>Calculadora de Treino de Skill - Exevopan Style</title>
   <style>
     body {
       background: #0d1117;
@@ -11,142 +11,107 @@
       max-width: 700px;
       margin: 40px auto;
       padding: 20px;
+      line-height: 1.5;
     }
     h1 {
       color: #58a6ff;
       text-align: center;
+      text-shadow: 0 0 10px #58a6ff;
     }
     label {
-      margin-top: 15px;
       display: block;
-      font-size: 16px;
+      margin-top: 15px;
     }
     select, input[type="number"], input[type="checkbox"] {
       width: 100%;
+      max-width: 300px;
       padding: 8px;
-      font-size: 16px;
-      margin-top: 5px;
+      margin-top: 8px;
     }
     button {
       margin-top: 20px;
       padding: 10px 20px;
+      font-weight: bold;
       background-color: #238636;
       color: white;
       border: none;
-      font-size: 16px;
+      border-radius: 6px;
       cursor: pointer;
-      width: 100%;
     }
     .result {
       margin-top: 30px;
-      padding: 15px;
       background: #161b22;
+      padding: 20px;
       border-radius: 8px;
     }
   </style>
 </head>
 <body>
+  <h1>Calculadora de Treino de Skill</h1>
+  <label for="currentSkill">Skill Atual:</label>
+  <input type="number" id="currentSkill" min="1" max="120" value="80">
 
-<h1>Calculadora de Treino de Skill</h1>
+  <label for="targetSkill">Skill Desejado:</label>
+  <input type="number" id="targetSkill" min="1" max="120" value="85">
 
-<label>Vocação:</label>
-<select id="vocation">
-  <option value="knight">Knight</option>
-  <option value="paladin">Paladin</option>
-  <option value="sorcerer">Sorcerer</option>
-  <option value="druid">Druid</option>
-  <option value="monk">Monk</option>
-</select>
+  <label><input type="checkbox" id="dummy"> Usando Exercise Dummy</label>
+  <label><input type="checkbox" id="double"> Double Skill Event</label>
 
-<label>Tipo de Skill:</label>
-<select id="skillType">
-  <option value="magic">Magic</option>
-  <option value="melee">Axe/Club/Sword</option>
-  <option value="distance">Distance</option>
-  <option value="fist">Fist</option>
-  <option value="shield">Shield</option>
-</select>
+  <button onclick="calcular()">Calcular</button>
 
-<label>Skill Atual:</label>
-<input type="number" id="currentSkill" value="80" min="1" max="130">
+  <div class="result" id="resultado">Resultado aparecerá aqui.</div>
 
-<label>Skill Desejado:</label>
-<input type="number" id="targetSkill" value="85" min="2" max="130">
+  <script>
+    const xpTable = {
+      magic: {
+        80: 232700,
+        81: 245800,
+        82: 259400,
+        83: 273500,
+        84: 288100
+      }
+    };
 
-<label>Loyalty Bonus (%):</label>
-<select id="loyalty">
-  <option value="0">0%</option>
-  <option value="5">5%</option>
-  <option value="10">10%</option>
-  <option value="15">15%</option>
-  <option value="20">20%</option>
-  <option value="25">25%</option>
-  <option value="30">30%</option>
-  <option value="35">35%</option>
-  <option value="40">40%</option>
-  <option value="45">45%</option>
-  <option value="50">50%</option>
-</select>
+    function calcular() {
+      const current = parseInt(document.getElementById('currentSkill').value);
+      const target = parseInt(document.getElementById('targetSkill').value);
+      const dummy = document.getElementById('dummy').checked;
+      const doubleSkill = document.getElementById('double').checked;
 
-<label><input type="checkbox" id="dummy"> Exercício com Dummy (Offline)</label>
-<label><input type="checkbox" id="double"> Double Skill Event</label>
+      if (isNaN(current) || isNaN(target) || target <= current) {
+        document.getElementById('resultado').textContent = 'Informe níveis válidos.';
+        return;
+      }
 
-<button onclick="calculate()">Calcular</button>
+      let totalXP = 0;
+      for (let i = current; i < target; i++) {
+        totalXP += xpTable.magic[i] || 0;
+      }
 
-<div class="result" id="result">Resultado aparecerá aqui.</div>
+      // XP por carga: 150 XP por carga com dummy, 75 sem dummy
+      let xpPerCharge = dummy ? 150 : 75;
+      if (doubleSkill) xpPerCharge *= 2;
 
-<script>
-function skillXP(level) {
-  return 50 * Math.pow(level - 10, 2);
-}
+      const totalCharges = Math.ceil(totalXP / xpPerCharge);
+      const weapons500 = Math.ceil(totalCharges / 500);
+      const weapons14400 = Math.ceil(totalCharges / 14400);
+      const seconds = totalCharges * 2; // Cada hit a cada 2 segundos
 
-function calculate() {
-  const current = parseInt(document.getElementById('currentSkill').value);
-  const target = parseInt(document.getElementById('targetSkill').value);
-  const loyalty = parseInt(document.getElementById('loyalty').value);
-  const dummy = document.getElementById('dummy').checked;
-  const doubleSkill = document.getElementById('double').checked;
-  const skillType = document.getElementById('skillType').value;
+      const h = Math.floor(seconds / 3600);
+      const m = Math.floor((seconds % 3600) / 60);
 
-  if (target <= current) {
-    document.getElementById('result').innerText = 'Skill alvo deve ser maior que skill atual.';
-    return;
-  }
-
-  let totalXP = 0;
-  for (let i = current; i < target; i++) {
-    totalXP += skillXP(i);
-  }
-
-  let baseGain = 14400; // duração de uma lasting weapon em segundos
-  let xpPerSecond = 1;
-
-  if (skillType === 'magic') xpPerSecond = 1.1;
-  else if (skillType === 'shield') xpPerSecond = 0.5;
-  else xpPerSecond = 0.9;
-
-  if (dummy) xpPerSecond *= 0.5; // dummy = metade
-  if (doubleSkill) xpPerSecond *= 2;
-
-  xpPerSecond *= (1 + (loyalty / 100));
-
-  const xpPerWeapon = baseGain * xpPerSecond;
-  const weaponsNeeded = Math.ceil(totalXP / xpPerWeapon);
-  const totalSeconds = weaponsNeeded * 8 * 3600;
-
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-
-  document.getElementById('result').innerText =
-    `Vocação: ${document.getElementById('vocation').value.charAt(0).toUpperCase() + document.getElementById('vocation').value.slice(1)}\n` +
-    `Tipo de Skill: ${skillType}\n` +
-    `Skill Atual: ${current}\n` +
-    `Skill Desejado: ${target}\n` +
-    `XP necessário: ${totalXP.toLocaleString()}\n` +
-    `Armas Necessárias: ${weaponsNeeded}\n` +
-    `Tempo Estimado: ${hours}h ${minutes}m`;
-}
-</script>
-
+      document.getElementById('resultado').innerHTML = `
+        Vocação: Druid<br>
+        Tipo de Skill: magic<br>
+        Skill Atual: ${current}<br>
+        Skill Desejado: ${target}<br>
+        XP necessário: ${totalXP.toLocaleString()}<br>
+        Armas Necessárias:<br>
+        &bull; ${weapons14400}x Lasting (14400 cargas)<br>
+        &bull; ${weapons500}x Normal (500 cargas)<br>
+        Tempo Estimado: ${h}h ${m}m
+      `;
+    }
+  </script>
 </body>
 </html>
