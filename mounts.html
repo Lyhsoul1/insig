@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Bônus de Montarias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #0d1117;
+      color: #f0f0f0;
+    }
+    h1, h2 {
+      color: #58a6ff;
+    }
+    #mounts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .mount-item {
+      background: #161b22;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #30363d;
+    }
+    #resultado {
+      background: #21262d;
+      padding: 15px;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Calculadora de Bônus de Montarias</h1>
+
+<div id="mounts">Carregando montarias...</div>
+
+<h2>Bônus totais:</h2>
+<div id="resultado">{}</div>
+
+<script>
+let dadosMontarias = [];
+
+async function carregarMontarias() {
+  const res = await fetch('mounts.json');
+  dadosMontarias = await res.json();
+
+  const container = document.getElementById('mounts');
+  container.innerHTML = '';
+
+  dadosMontarias.forEach((mount, index) => {
+    const div = document.createElement('div');
+    div.className = 'mount-item';
+    div.innerHTML = `
+      <label>
+        <input type="checkbox" data-index="${index}"> ${mount.nome}
+      </label>
+    `;
+    container.appendChild(div);
+  });
+
+  document.querySelectorAll('input[type=checkbox]').forEach(cb => {
+    cb.addEventListener('change', atualizarBonus);
+  });
+
+  atualizarBonus();
+}
+
+function atualizarBonus() {
+  const selecionados = [...document.querySelectorAll('input[type=checkbox]:checked')]
+    .map(cb => parseInt(cb.dataset.index));
+
+  const total = {};
+
+  selecionados.forEach(i => {
+    const bonus = dadosMontarias[i].bonus || {};
+    for (const [chave, valor] of Object.entries(bonus)) {
+      total[chave] = (total[chave] || 0) + valor;
+    }
+  });
+
+  document.getElementById('resultado').textContent = JSON.stringify(total, null, 2);
+}
+
+carregarMontarias();
+</script>
+
+</body>
+</html>
