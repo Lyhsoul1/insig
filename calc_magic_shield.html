@@ -67,36 +67,32 @@
 <body>
 
 <h1>Magic Shield Calculator</h1>
-<p><em>Baseado na fórmula oficial desde o rebalance de 23/11/2020.</em></p>
-
-<label for="level">Level:</label>
-<input type="number" id="level" min="1" max="2000" value="500" />
+<p><em>Atualizado com base no rebalanceamento de 23/11/2020.</em></p>
 
 <label for="magicLevel">Magic Level:</label>
 <input type="number" id="magicLevel" min="0" max="200" value="100" />
 
-<button onclick="calcularMS()">Calcular Magic Shield</button>
+<button onclick="calcularMagicShield()">Calcular Magic Shield</button>
 
 <div class="result" id="resultado"></div>
 
 <a href="index.html">&larr; Voltar ao menu principal</a>
 
 <script>
-function calcularMS() {
-  const level = parseInt(document.getElementById('level').value);
-  const magicLevel = parseInt(document.getElementById('magicLevel').value);
+function calcularMagicShield() {
+  const ml = parseInt(document.getElementById('magicLevel').value);
 
-  if (isNaN(level) || isNaN(magicLevel) || level < 1 || magicLevel < 0) {
-    alert('Insira valores válidos.');
+  if (isNaN(ml) || ml < 0) {
+    alert('Informe um Magic Level válido.');
     return;
   }
 
-  const baseShield = (level * 8) + (magicLevel * 32);
-  const boostedShield = Math.round(baseShield * 1.0967); // com Magic Capacity Booster
+  const baseShield = ml * 48;
+  const boostedShield = Math.round(baseShield * 1.0967);
 
   document.getElementById('resultado').innerHTML = `
-    Seu total de Magic Shield é <strong>${baseShield.toLocaleString()}</strong> mana points.<br />
-    Usando um spellbook com Magic Capacity Booster, seria <strong>${boostedShield.toLocaleString()}</strong>.
+    O seu total de Magic Shield é <strong>${baseShield.toLocaleString()}</strong> mana points.<br />
+    Usando um spellbook com Magic Capacity Booster seria <strong>${boostedShield.toLocaleString()}</strong>.
   `;
 }
 </script>
