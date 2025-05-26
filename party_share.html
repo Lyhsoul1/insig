@@ -1,117 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<title>Calculadora Nível para Share - Calculadora de Bônus</title>
-<style>
-  body {
-    background: #0d1117;
-    color: #f0f0f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 30px 20px;
-    max-width: 700px;
-    margin: auto;
-  }
-  h1 {
-    color: #58a6ff;
-    margin-bottom: 20px;
-  }
-  label {
-    display: block;
-    margin-top: 20px;
-  }
-  select, input[type=number] {
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: none;
-    margin-top: 5px;
-    width: 100%;
-    max-width: 200px;
-  }
-  button {
-    margin-top: 30px;
-    background: #238636;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 0 10px #2ea043;
-    transition: background-color 0.3s ease;
-  }
-  button:hover {
-    background: #2ea043;
-  }
-  .result {
-    margin-top: 30px;
-    font-size: 20px;
-    background: #161b22;
-    padding: 15px;
-    border-radius: 8px;
-  }
-  a {
-    color: #58a6ff;
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 40px;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <title>Calculadora de Shared Experience Level</title>
+  <style>
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: Arial, sans-serif;
+      max-width: 480px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #238636;
+    }
+    h1 {
+      color: #58a6ff;
+      margin-bottom: 30px;
+    }
+    input[type=number] {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 6px;
+      border: none;
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    button {
+      background: #238636;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: #2ea043;
+    }
+    .result {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #58a6ff;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Calculadora: Nível para Share de EXP na Party</h1>
+  <h1>Shared Experience Level Calculator</h1>
 
-<label for="maxLevel">Nível do personagem mais alto da party:</label>
-<input type="number" id="maxLevel" min="1" max="999" value="100" />
+  <label for="levelInput">Nível Atual:</label><br />
+  <input type="number" id="levelInput" min="1" max="2000" value="500" />
 
-<label for="shareRule">Regra de share usada:</label>
-<select id="shareRule">
-  <option value="rule1">Nível mínimo = máximo - 15</option>
-  <option value="rule2">Nível mínimo = máximo / 2</option>
-  <option value="rule3">Nível mínimo = máximo - 10</option>
-</select>
+  <br />
+  <button onclick="calculateShare()">Calcular</button>
 
-<button onclick="calcularShare()">Calcular nível mínimo para share</button>
+  <div class="result" id="result"></div>
 
-<div class="result" id="resultado"></div>
+  <script>
+    function calculateShare() {
+      const level = parseInt(document.getElementById('levelInput').value);
+      if (isNaN(level) || level < 1) {
+        document.getElementById('result').textContent = "Por favor, insira um nível válido maior que 0.";
+        return;
+      }
 
-<a href="index.html">&larr; Voltar ao menu principal</a>
+      // Cálculo oficial:
+      const minLevel = level - Math.floor(level / 3);
+      const maxLevel = level + Math.floor(level / 2);
 
-<script>
-function calcularShare() {
-  const maxLevel = parseInt(document.getElementById('maxLevel').value);
-  const rule = document.getElementById('shareRule').value;
-  let minLevel = 0;
-  if (isNaN(maxLevel) || maxLevel < 1) {
-    alert('Por favor, insira um nível válido.');
-    return;
-  }
+      document.getElementById('result').textContent = 
+        `Um personagem nível ${level} pode compartilhar experiência com níveis entre ${minLevel} e ${maxLevel}.`;
+    }
 
-  switch(rule) {
-    case 'rule1':
-      minLevel = maxLevel - 15;
-      break;
-    case 'rule2':
-      minLevel = Math.floor(maxLevel / 2);
-      break;
-    case 'rule3':
-      minLevel = maxLevel - 10;
-      break;
-  }
-
-  if(minLevel < 1) minLevel = 1;
-
-  document.getElementById('resultado').textContent = 
-    `O nível mínimo para receber EXP em sua party é: ${minLevel}`;
-}
-</script>
+    // Calcula ao carregar com valor padrão
+    window.onload = () => calculateShare();
+  </script>
 
 </body>
 </html>
