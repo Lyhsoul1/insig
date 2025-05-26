@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Shared Experience Level Calculator</title>
@@ -55,11 +55,11 @@
 
   <h1>Shared Experience Level Calculator</h1>
 
-  <label for="levelInput">Nível Atual:</label><br />
+  <label for="levelInput">Current Level:</label><br />
   <input type="number" id="levelInput" min="1" max="2000" value="500" />
 
   <br />
-  <button onclick="calculateShare()">Calcular</button>
+  <button onclick="calculateShare()">Calculate</button>
 
   <div class="result" id="result"></div>
 
@@ -67,23 +67,20 @@
     function calculateShare() {
       const level = parseInt(document.getElementById('levelInput').value);
       if (isNaN(level) || level < 1) {
-        document.getElementById('result').textContent = "Por favor, insira um nível válido maior que 0.";
+        document.getElementById('result').textContent = "Please enter a valid level greater than 0.";
         return;
       }
 
-      // Fórmulas oficiais:
       const minLevel = level - Math.floor(level / 3);
       const maxLevel = level + Math.floor(level / 2);
 
-      // Nível mínimo para receber EXP na party - regra Tibia 3% (aprox)
-      const minReceive = Math.floor(level * 0.97);
-
-      document.getElementById('result').textContent = 
-        `Um personagem nível ${level} pode compartilhar experiência com níveis entre ${minLevel} e ${maxLevel}.\n` +
-        `O nível mínimo para receber EXP em sua party é: ${minReceive}.`;
+      document.getElementById('result').textContent =
+        `Shared Experience Level Calculator\n` +
+        `Current Level:\n` +
+        `${level}\n` +
+        `A level ${level} can share experience with levels ${minLevel} to ${maxLevel}.`;
     }
 
-    // Calcula ao carregar com valor padrão
     window.onload = () => calculateShare();
   </script>
 
