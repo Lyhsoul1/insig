@@ -9,8 +9,7 @@
       max-width: 900px;
       margin: 30px auto;
       padding: 20px;
-      background: url('https://i.imgur.com/VxIqMIt.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #1e1e2f;
       color: #e0e0e0;
       text-shadow: 1px 1px 2px #000;
     }
@@ -84,6 +83,10 @@
       color: #0f0;
       box-shadow: 0 0 8px #0f0;
     }
+
+    .tooltip {
+      cursor: help;
+    }
   </style>
 </head>
 <body>
@@ -117,7 +120,8 @@
 
         dadosMounts.forEach((mount, index) => {
           const div = document.createElement('div');
-          div.className = 'mount-item';
+          div.className = 'mount-item tooltip';
+          div.title = "Cada montaria concede 0.10% de experiência extra. Os bônus são cumulativos.";
           div.innerHTML = `
             <label>
               <input type="checkbox" data-index="${index}"> ${mount.nome}
@@ -151,6 +155,10 @@
           total[chave] = (total[chave] || 0) + valor;
         }
       });
+
+      // Calcular total de bônus de XP (0.10% por montaria)
+      const xpBonusTotal = (selecionados.length * 0.10).toFixed(2);
+      total["bonus_experiencia_total_%"] = xpBonusTotal + "%";
 
       document.getElementById('resultado').textContent = JSON.stringify(total, null, 2);
     }
