@@ -1,0 +1,3079 @@
+[
+  {
+    "nome": "Citizen",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Citizen",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Hunter",
+    "bonusMale": {
+      "Vocation Skills": 1,
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Hunter",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Vocation Skills": 1,
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Mage",
+    "bonusMale": {
+      "Critical Hit Chance": 2,
+      "Critical Hit Damage": 2,
+      "Magic Level": 2,
+      "Vocation Skills": 2,
+      "Max Hitpoints": 2,
+      "Drown)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Mage",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Knight",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Capacity Bonus": 1,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Knight",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Capacity Bonus": 1,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Nobleman",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Noblewoman",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Summoner",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Summoner",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 2,
+      "Magic Level": 2,
+      "Vocation Skills": 2,
+      "Max Hitpoints": 2,
+      "Drown)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Warrior",
+    "bonusMale": {
+      "Vocation Skills": 1,
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Capacity Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Warrior",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Vocation Skills": 1,
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Barbarian",
+    "bonusMale": {
+      "Vocation Skills": 1,
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Capacity Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Barbarian",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Vocation Skills": 1,
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Druid",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Druid",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Wizard",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Wizard",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Oriental",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Capacity Bonus": 1,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Oriental",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Pirate",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Pirate",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Assassin",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Assassin",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Beggar",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Beggar",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Shaman",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Shaman",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Norseman",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Norseman",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Nightmare",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Nightmare",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Jester",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Jester",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Brotherhood",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Brotherhood",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Demon Hunter",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Demon Hunter",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Yalaharian",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Yalaharian",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Husband",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Wife",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Warmaster",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Warmaster",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Wayfarer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Wayfarer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Afflicted",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Afflicted",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Elementalist",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Task Points": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Deepling",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Insectoid",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Entrepreneur",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Crystal Warlord",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Crystal Warlord",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Soil Guardian",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Soil Guardian",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Demon",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Demon",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Cave Explorer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 2,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Cave Explorer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Capacity Bonus": 2
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Dream Warden",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Dream Warden",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Glooth Engineer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Glooth Engineer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Jersey",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Jersey",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Champion",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Champion",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Conjurer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Conjurer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Beastmaster",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Absorb (Poison)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Beastmaster",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Absorb (Poison)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Chaos Acolyte",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Chaos Acolyte",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Death Herald",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Death Herald",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 99999,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Ranger",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Ranger",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Ceremonial Garb",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Ceremonial Garb",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Experience Bonus": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Puppeteer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Puppeteer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Spirit Caller",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Spirit Caller",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Evoker",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Evoker",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Seaweaver",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Absorb (Poison)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Seaweaver",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Absorb (Poison)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Recruiter",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Recruiter",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Sea Dog",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Sea Dog",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Royal Pumpkin",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Royal Pumpkin",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Rift Warrior",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Rift Warrior",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Winter Warden",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Winter Warden",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Philosopher",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Philosopher",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Arena Champion",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Arena Champion",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Lupine Warden",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Lupine Warden",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Grove Keeper",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Grove Keeper",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Life Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Festive",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Festive",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Pharaoh",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Pharaoh",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Trophy Hunter",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Trophy Hunter",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Warrior",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Warrior",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Summoner",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Summoner",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Nobleman",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Nobleman",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Mage",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Mage",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Knight",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Knight",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Hunter",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Hunter",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Citizen",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Retro Citizen",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Herbalist",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Herbalist",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Sun Priest",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Sun Priest",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Makeshift Warrior",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Makeshift Warrior",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Capacity Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Siege Master",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Siege Master",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Mercenary",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Mercenary",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Battle Mage",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Battle Mage",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Discoverer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Discoverer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Sinister Archer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Sinister Archer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Pumpkin Mummy",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Pumpkin Mummy",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Dream Warrior",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Dream Warrior",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Percht Raider",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Percht Raider",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Owl Keeper",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Owl Keeper",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Guidon Bearer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Guidon Bearer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Void Master",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Void Master",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Veteran Paladin",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Veteran Paladin",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Lion of War",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Lion of War",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Golden",
+    "bonusMale": {
+      "Critical Hit Chance": 0.3,
+      "Extra Bestiary Points": 1,
+      "Max Hitpoints": 2,
+      "Drown)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Golden",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.5,
+      "Extra Bestiary Points": 1,
+      "Max Hitpoints": 2,
+      "Life Drain)": 1.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Hand of the Inquisition",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Breezy Garb",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Orcsoberfest Garb",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "ML Bonus (Ice)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Poltergeist",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Poltergeist",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Herder",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Herder",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Falconer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Falconer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Dragon Slayer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Vocation Skills": 1,
+      "Loot Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Dragon Slayer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Vocation Skills": 1,
+      "Loot Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Trailblazer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Trailblazer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Vocation Skills": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Revenant",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "ML Bonus (Holy)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Revenant",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "ML Bonus (Holy)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Jouster",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Jouster",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Moth Cape",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "ML Bonus (Death)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Moth Cape",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "ML Bonus (Death)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Rascoohan",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Rascoohan",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Merry Garb",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Merry Garb",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Rune Master",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Absorb (Ice)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Rune Master",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Absorb (Ice)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Citizen of Issavi",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Citizen of Issavi",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Forest Warden",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Loot Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Forest Warden",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Loot Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Royal Bounacean Advisor",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Damage (Ice)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Royal Bounacean Advisor",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Damage (Ice)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Dragon Knight",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Absorb (Holy)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Dragon Knight",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Absorb (Holy)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Arbalester",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Absorb (Ice)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Arbalester",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Absorb (Ice)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Royal Costume",
+    "bonusMale": {
+      "Critical Hit Chance": 0.3,
+      "Loot Bonus": 3,
+      "Extra Bestiary Points": 1,
+      "Vocation Skills": 2,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Drown)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Royal Costume",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.3,
+      "Loot Bonus": 3,
+      "Extra Bestiary Points": 1,
+      "Vocation Skills": 2,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Drown)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Formal Dress",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Formal Dress",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Ghost Blade",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Damage (Poison)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Ghost Blade",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Damage (Poison)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Nordic Chieftain",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Nordic Chieftain",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Fire-Fighter",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Fire-Fighter",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Fencer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Fencer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Shadowlotus Disciple",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Loot Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Damage (Poison)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Shadowlotus Disciple",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Loot Bonus": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Damage (Poison)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Ancient Aucar",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Ancient Aucar",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Frost Tracer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Frost Tracer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Armoured Archer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Vocation Skills": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Damage (Ice)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Armoured Archer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Vocation Skills": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "Damage (Ice)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Decaying Defender",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Decaying Defender",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Darklight Evoker",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Absorb (Holy)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Darklight Evoker",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Absorb (Holy)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Flamefury Mage",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Flamefury Mage",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Doom Knight",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Doom Knight",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Draccoon Herald",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Draccoon Herald",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Mana Leech Amount": 0.5
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Celestial Avenger",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Celestial Avenger",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Blade Dancer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Blade Dancer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Holy)": 1,
+      "Exercise Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Rootwalker",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Rootwalker",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Experience Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Beekeeper",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Mana Leech Amount": 0.5,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Fiend Slayer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Task Points": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Experience Bonus": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Fiend Slayer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Task Points": 1,
+      "Max Hitpoints": 0.08,
+      "Max Manapoints": 0.05,
+      "PvE Dodge (Ice)": 1,
+      "Experience Bonus": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Field Surgeon",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Life Drain)": 1,
+      "Absorb (Poison)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Field Surgeon",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Life Drain)": 1,
+      "Absorb (Poison)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Corrupted Mage",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Damage (Mana Drain)": 1,
+      "Holy)": 1,
+      "Damage (Drown)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Corrupted Mage",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Experience Bonus": 1,
+      "Exercise Bonus": 3,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Damage (Poison)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Deathwhisper",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Life Leech Amount": 1,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Ice)": 1,
+      "Holy)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Deathwhisper",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Life Leech Amount": 1,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Ice)": 1,
+      "Holy)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Soulkeeper",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Damage (Mana Drain)": 1,
+      "Holy)": 1,
+      "Damage (Drown)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Soulkeeper",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Damage (Mana Drain)": 1,
+      "Holy)": 1,
+      "Damage (Drown)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Crimson Elf",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Absorb (Holy)": 1,
+      "Life Drain)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Crimson Elf",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Absorb (Holy)": 1,
+      "Life Drain)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Soulrender",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Damage (Mana Drain)": 1,
+      "Holy)": 1,
+      "Damage (Drown)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Soulrender",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Life Leech Amount": 1,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Absorb (Life Drain)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Masked Wanderer",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Life Leech Amount": 1,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Mana Drain)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Masked Wanderer",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Life Leech Amount": 1,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Mana Drain)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Xael",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Mana Leech Amount": 1,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Drown)": 1,
+      "Damage (Poison)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Xael",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Mana Leech Amount": 1,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Drown)": 1,
+      "Damage (Poison)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Spellbinder",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Mana Leech Amount": 1,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Ice)": 1,
+      "Absorb (Drown)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Spellbinder",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Mana Leech Amount": 1,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Ice)": 1,
+      "Absorb (Drown)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Naturian Keeper",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Mana Leech Amount": 1,
+      "Task Points": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Vocation Skills": 1,
+      "Damage (Ice)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Naturian Keeper",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Damage (Mana Drain)": 1,
+      "Holy)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Castle War",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Vocation Skills": 1,
+      "Reflection": 5,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Death)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Castle War",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Vocation Skills": 1,
+      "Reflection": 5,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Death)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Zeus",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Vocation Skills": 1,
+      "Experience Bonus": 3,
+      "Capacity Bonus": 3,
+      "Task Points": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Absorb (Poison)": 1,
+      "Damage (Mana Drain)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Hera",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Vocation Skills": 1,
+      "Experience Bonus": 3,
+      "Capacity Bonus": 3,
+      "Task Points": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Absorb (Poison)": 1,
+      "Damage (Mana Drain)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Stella Solaria",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Drown)": 1,
+      "Holy)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Stella Solaria",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Damage (Mana Drain)": 1,
+      "Holy)": 1,
+      "Damage (Drown)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Fay Berseker",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Mana Leech Amount": 5,
+      "Vocation Skills": 1,
+      "Damage (Drown)": 1,
+      "Absorb (Holy)": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Fay Berseker",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Damage (Mana Drain)": 1,
+      "Holy)": 1,
+      "Damage (Drown)": 1
+    },
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Blackout Barbarian",
+    "bonusMale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Loot Bonus": 5,
+      "Vocation Skills": 1
+    },
+    "bonusFemale": null,
+    "bonusNeutral": null
+  },
+  {
+    "nome": "Blackout Barbarian",
+    "bonusMale": null,
+    "bonusFemale": {
+      "Critical Hit Chance": 0.05,
+      "Critical Hit Damage": 1,
+      "Max Hitpoints": 1,
+      "Max Manapoints": 1,
+      "Life Leech Amount": 1,
+      "Vocation Skills": 1,
+      "Damage (Mana Drain)": 1,
+      "Holy)": 1,
+      "Damage (Drown)": 1
+    },
+    "bonusNeutral": null
+  }
+]
