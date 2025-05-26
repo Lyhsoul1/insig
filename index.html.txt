@@ -7,19 +7,26 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    max-width: 400px;
+    max-width: 600px;
     margin: 30px auto;
     padding: 0 15px;
   }
   h1 {
     text-align: center;
   }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
   label {
-    display: block;
-    margin-bottom: 8px;
     cursor: pointer;
   }
-  #totalBonus {
+  #totals {
     margin-top: 20px;
     font-weight: bold;
     font-size: 1.2em;
@@ -31,54 +38,72 @@
 
 <h1>Calculadora de Bônus de Addons</h1>
 
-<div id="addonsList"></div>
+<table id="addonsTable">
+  <thead>
+    <tr>
+      <th>Selecionar</th>
+      <th>Addon</th>
+      <th>Bônus Masculino</th>
+      <th>Bônus Feminino</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Linhas vão aqui -->
+  </tbody>
+</table>
 
-<div id="totalBonus">Bônus total: 0</div>
+<div id="totals">
+  Bônus total Masculino: 0 | Bônus total Feminino: 0
+</div>
 
 <script>
-// Aqui você pode editar os addons e seus bônus
-const addons = [
-  { nome: "Dragon Helmet", bonus: 5 },
-  { nome: "Golden Armor", bonus: 8 },
-  { nome: "Shadow Boots", bonus: 3 },
-  { nome: "Phoenix Shield", bonus: 7 },
-  { nome: "Crystal Sword", bonus: 6 }
-];
+let addons = [];
 
-// Função que monta a lista de checkboxes
-function montarLista() {
-  const container = document.getElementById('addonsList');
-  container.innerHTML = ''; // limpa antes
+function montarTabela() {
+  const tbody = document.querySelector('#addonsTable tbody');
+  tbody.innerHTML = '';
 
   addons.forEach((addon, i) => {
-    const label = document.createElement('label');
-    label.innerHTML = `
-      <input type="checkbox" value="${i}" />
-      ${addon.nome} (+${addon.bonus})
+    const tr = document.createElement('tr');
+
+    tr.innerHTML = `
+      <td><input type="checkbox" value="${i}" /></td>
+      <td>${addon.nome}</td>
+      <td>${addon.bonusMale ?? 0}</td>
+      <td>${addon.bonusFemale ?? 0}</td>
     `;
-    container.appendChild(label);
+
+    tbody.appendChild(tr);
   });
 }
 
-// Função que calcula e mostra o total de bônus
 function calcularBonus() {
-  const checkboxes = document.querySelectorAll('#addonsList input[type="checkbox"]');
-  let total = 0;
+  const checkboxes = document.querySelectorAll('#addonsTable tbody input[type="checkbox"]');
+  let totalMale = 0;
+  let totalFemale = 0;
+
   checkboxes.forEach(cb => {
     if (cb.checked) {
       const idx = parseInt(cb.value);
-      total += addons[idx].bonus;
+      totalMale += addons[idx].bonusMale ?? 0;
+      totalFemale += addons[idx].bonusFemale ?? 0;
     }
   });
-  document.getElementById('totalBonus').textContent = `Bônus total: ${total}`;
+
+  document.getElementById('totals').textContent =
+    `Bônus total Masculino: ${totalMale} | Bônus total Feminino: ${totalFemale}`;
 }
 
-// Monta lista ao carregar a página
-montarLista();
-
-// Adiciona listener para recalcular quando clicar nas checkboxes
-document.getElementById('addonsList').addEventListener('change', calcularBonus);
-
+fetch('addons.json')
+  .then(res => res.json())
+  .then(data => {
+    addons = data;
+    montarTabela();
+    document.querySelector('#addonsTable tbody').addEventListener('change', calcularBonus);
+  })
+  .catch(err => {
+    console.error('Erro ao carregar addons:', err);
+  });
 </script>
 
 </body>
