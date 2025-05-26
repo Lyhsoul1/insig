@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<title>Magic Shield % - Calculadora de Bônus</title>
-<style>
-  body {
-    background: #0d1117;
-    color: #f0f0f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 30px 20px;
-    max-width: 700px;
-    margin: auto;
-  }
-  h1 {
-    color: #58a6ff;
-    margin-bottom: 20px;
-  }
-  label {
-    display: block;
-    margin-top: 20px;
-  }
-  input[type=number] {
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: none;
-    margin-top: 5px;
-    width: 100%;
-    max-width: 200px;
-  }
-  button {
-    margin-top: 30px;
-    background: #238636;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 0 10px #2ea043;
-    transition: background-color 0.3s ease;
-  }
-  button:hover {
-    background: #2ea043;
-  }
-  .result {
-    margin-top: 30px;
-    font-size: 20px;
-    background: #161b22;
-    padding: 15px;
-    border-radius: 8px;
-  }
-  a {
-    color: #58a6ff;
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 40px;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <title>Calculadora de Magic Shield</title>
+  <style>
+    body {
+      background: #0d1117;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 30px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      color: #58a6ff;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+    }
+    input[type=number] {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      margin-top: 5px;
+      width: 100%;
+      max-width: 200px;
+    }
+    button {
+      margin-top: 30px;
+      background: #238636;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #2ea043;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: #2ea043;
+    }
+    .result {
+      margin-top: 30px;
+      font-size: 20px;
+      background: #161b22;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-block;
+      margin-top: 40px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Calculadora de Magic Shield (%)</h1>
+<h1>Magic Shield Calculator</h1>
+<p><em>Baseado na fórmula oficial desde o rebalance de 23/11/2020.</em></p>
 
-<label for="magicLevel">Digite seu Magic Level:</label>
-<input type="number" id="magicLevel" min="0" max="150" value="20" />
+<label for="level">Level:</label>
+<input type="number" id="level" min="1" max="2000" value="500" />
+
+<label for="magicLevel">Magic Level:</label>
+<input type="number" id="magicLevel" min="0" max="200" value="100" />
 
 <button onclick="calcularMS()">Calcular Magic Shield</button>
 
@@ -79,17 +83,20 @@
 
 <script>
 function calcularMS() {
-  const ml = parseInt(document.getElementById('magicLevel').value);
-  if(isNaN(ml) || ml < 0) {
-    alert('Informe um Magic Level válido.');
+  const level = parseInt(document.getElementById('level').value);
+  const magicLevel = parseInt(document.getElementById('magicLevel').value);
+
+  if (isNaN(level) || isNaN(magicLevel) || level < 1 || magicLevel < 0) {
+    alert('Insira valores válidos.');
     return;
   }
-  // Fórmula comum de Magic Shield:
-  // Magic Shield % = ML * 0.3 (exemplo, pode variar por servidor)
-  const msPercent = (ml * 0.3).toFixed(1);
+
+  const baseShield = (level * 8) + (magicLevel * 32);
+  const boostedShield = Math.round(baseShield * 1.0967); // com Magic Capacity Booster
 
   document.getElementById('resultado').innerHTML = `
-    Magic Shield: <strong>${msPercent}%</strong>
+    Seu total de Magic Shield é <strong>${baseShield.toLocaleString()}</strong> mana points.<br />
+    Usando um spellbook com Magic Capacity Booster, seria <strong>${boostedShield.toLocaleString()}</strong>.
   `;
 }
 </script>
