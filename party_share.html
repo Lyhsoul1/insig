@@ -38,6 +38,7 @@
       border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      margin: 10px 5px;
     }
     button:hover {
       background: #2ea043;
@@ -60,8 +61,10 @@
 
   <br />
   <button onclick="calculateShare()">Calculate</button>
-
+  
   <div class="result" id="result"></div>
+  
+  <button onclick="goBack()">Voltar</button>
 
   <script>
     function calculateShare() {
@@ -79,6 +82,10 @@
         `Current Level:\n` +
         `${level}\n` +
         `A level ${level} can share experience with levels ${minLevel} to ${maxLevel}.`;
+    }
+
+    function goBack() {
+      window.location.href = "index.html";  // Muda para a página principal
     }
 
     window.onload = () => calculateShare();
