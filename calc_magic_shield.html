@@ -2,32 +2,35 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
-<title>Calculadora de Magic Shield (Aproximada)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calculadora de Magic Shield - Tibia</title>
 <style>
   body {
     background: #0d1117;
     color: #f0f0f0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 30px 20px;
-    max-width: 700px;
+    max-width: 600px;
     margin: auto;
   }
   h1 {
     color: #58a6ff;
     margin-bottom: 20px;
+    text-align: center;
   }
   label {
     display: block;
     margin-top: 20px;
+    font-weight: bold;
   }
   input[type=number] {
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: none;
-    margin-top: 5px;
     width: 100%;
     max-width: 200px;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
   }
   button {
     margin-top: 30px;
@@ -41,6 +44,9 @@
     cursor: pointer;
     box-shadow: 0 0 10px #2ea043;
     transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   button:hover {
     background: #2ea043;
@@ -49,28 +55,24 @@
     margin-top: 30px;
     font-size: 20px;
     background: #161b22;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
+    text-align: center;
   }
-  a {
-    color: #58a6ff;
-    text-decoration: none;
+  .note {
+    margin-top: 10px;
     font-size: 14px;
-    display: inline-block;
-    margin-top: 40px;
-  }
-  a:hover {
-    text-decoration: underline;
+    color: #888;
+    text-align: center;
   }
 </style>
 </head>
 <body>
 
-<h1>Calculadora Aproximada de Magic Shield (Tibia Global)</h1>
-<p><em>Fórmula aproximada: Magic Level × 20 + Level × 5</em></p>
+<h1>Calculadora de Magic Shield - Tibia Global</h1>
 
 <label for="level">Level do personagem:</label>
-<input type="number" id="level" min="1" max="1000" value="700" />
+<input type="number" id="level" min="1" max="999" value="700" />
 
 <label for="magicLevel">Magic Level:</label>
 <input type="number" id="magicLevel" min="0" max="150" value="120" />
@@ -79,30 +81,36 @@
 
 <div class="result" id="resultado"></div>
 
-<a href="index.html">&larr; Voltar ao menu principal</a>
-
 <script>
 function calcularMagicShield() {
   const level = parseInt(document.getElementById('level').value);
   const ml = parseInt(document.getElementById('magicLevel').value);
 
   if (isNaN(level) || level < 1) {
-    alert('Informe um level válido.');
+    alert('Por favor, insira um Level válido (mínimo 1).');
     return;
   }
   if (isNaN(ml) || ml < 0) {
-    alert('Informe um Magic Level válido.');
+    alert('Por favor, insira um Magic Level válido (mínimo 0).');
     return;
   }
 
-  // Fórmula aproximada:
-  const baseShield = ml * 20 + level * 5;
-  const boostedShield = Math.round(baseShield * 1.09); // +9% booster
+  // Fórmula oficial aproximada:
+  // Magic Shield base = (Level * 4) + (Magic Level * 20)
+  const magicShieldBase = (level * 4) + (ml * 20);
 
-  document.getElementById('resultado').innerHTML = `
-    Seu total de Magic Shield é <strong>${baseShield.toLocaleString()}</strong> mana points.<br />
-    Usando um spellbook com Magic Capacity Booster, seria <strong>${boostedShield.toLocaleString()}</strong>.
+  // Spellbook com Magic Capacity Booster aumenta 9%
+  const magicShieldBooster = Math.round(magicShieldBase * 1.09);
+
+  const resultadoTexto = `
+    <p>Level: <strong>${level}</strong></p>
+    <p>Magic Level: <strong>${ml}</strong></p>
+    <p>Seu total de Magic Shield é <strong>${magicShieldBase.toLocaleString('pt-BR')}</strong> pontos de mana.</p>
+    <p>Usando um spellbook com Magic Capacity Booster, você teria <strong>${magicShieldBooster.toLocaleString('pt-BR')}</strong>.</p>
+    <p class="note">Fórmula atualizada com base nas alterações oficiais de 23/11/2020.</p>
   `;
+
+  document.getElementById('resultado').innerHTML = resultadoTexto;
 }
 </script>
 
