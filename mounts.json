@@ -1,0 +1,2472 @@
+[
+  {
+    "nome": "Widow Queen",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Racing Bird",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "War Bear",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Black Sheep",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Midnight Panther",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Draptor",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Titanica",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Tin Lizzard",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Blazebringer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Rapid Boar",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Stampor",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Undead Cavebear",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Donkey",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Tiger Slug",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Uniwheel",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Crystal Wolf",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "War Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Kingly Deer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Tamed Panda",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dromedary",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Scorpion King",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Thornfire Wolf",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Rented Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Armoured War Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Shadow Draptor",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dark Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Rented Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Rented Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Lady Bug",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Manta Ray",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Ironblight",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Magma Crawler",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dragonling",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Gnarlhound",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Crimson Ray",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Steelbeak",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Water Buffalo",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Tombstinger",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Platesaurian",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Ursagrodon",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Hellgrip",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Noble Lion",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Desert King",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Shock Head",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Blue Draptor",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Walker",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Azudocus",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Carpacosaurus",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Death Crawler",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Flamesteed",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Jade Lion",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Jade Pincer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Nethersteed",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Tempest",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Winter King",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Doombringer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Woodland Prince",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Hailtorm Fury",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Siegebreaker",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Poisonbane",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Blackpelt",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Golden Dragonfly",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Steel Bee",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Copper Fly",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Tundra Rambler",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Highland Yak",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Glacier Vagabond",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Glooth Glider",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Shadow Hart",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Black Stag",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Emperor Deer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Flying Divan",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Magic Carpet",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Floating Kashmir",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Ringtail Waccoon",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Night Waccoon",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Emerald Waccoon",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Flitterkatzen",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Venompaw",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Batcat",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Sea Devil",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Coralripper",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Plumfish",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Gorongra",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Noctungra",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Silverneck",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Slagsnare",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Nightstinger",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Razorcreep",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Rift Runner",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Nightdweller",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Frostflare",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Cinderhoof",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Mouldpincer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Bloodcurl",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Leafscuttler",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Sparkion",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Swamp Snapper",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Mould Shell",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Reed Lurker",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Neon Sparkid",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Vortexion",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Ivory Fang",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Shadow Claw",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Snow Pelt",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Jackalope",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Wolpertinger",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dreadhare",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Stone Rhino",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Gold Sphinx",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Emerald Sphinx",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Shadow Sphinx",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Jungle Saurian",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Ember Saurian",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Lagoon Saurian",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Blazing Unicorn",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Arctic Unicorn",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Prismatic Unicorn",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Cranium Spider",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Cave Tarantula",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Gloom Widow",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Marsh Toad",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Sanguine Frog",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Toxic Toad",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Ebony Tiger",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Jungle Tiger",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Flying Book",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Snowy Owl",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Boreal Owl",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Lacewing Moth",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Hibernal Moth",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Cold Percht Sleigh",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Bright Percht Sleigh",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dark Percht Sleigh",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Festive Snowman",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Muffled Snowman",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Caped Snowman",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Rabbit Rickshaw",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Bunny Dray",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Cony Cart",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "River Crocovile",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Swamp Crocovile",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Nightmarish Crocovile",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Jousting Eagle",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Cerberus Champion",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Gryphon",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Battle Badger",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Ether Badger",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Zaoan Badger",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Cow",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Blue Rolling Barrel",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Red Rolling Barrel",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Green Rolling Barrel",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Floating Sage",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Floating Scholar",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Floating Augur",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Haze",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Antelope",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Snow Strider",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dusk Pryer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dawn Strayer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Phantasmal Jade",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Benevolent Savanna Ostrich",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Benevolent Coral Rhea",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Benevolent Eventide Nandu",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Voracious Hyaena",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Cunning Hyaena",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Scruffy Hyaena",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "White Lion",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Krakoloss",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Merry Mammoth",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Holiday Mammoth",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Festive Mammoth",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Void Watcher",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Rune Watcher",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Rift Watcher",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Phant",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Shellodon",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Singeing Steed",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Hyacinth",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Peony",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dandelion",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Rustwurm",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Bogwurm",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Gloomwurm",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Emerald Raven",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Mystic Raven",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Radiant Raven",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Gloothomotive",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Topaz Shrine",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Jade Shrine",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Mint Ibex",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Giant Beaver",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dark Stampor",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Jousting Warhorse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Parade Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Jousting Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Tourney Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "King Kongra",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Mutated Abomination",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Tangerine Flecked Koi",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Brass Speckled Koi",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Ink Spotted Koi",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Frostbringer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Winterstride",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Icebreacher",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Foxmouse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Boisterous Bull",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Surly Steer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Obstinate Ox",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Darkfire Devourer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Spirit of Purity",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Doom Skull",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Magma Skull",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Corpsefire Skull",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Mystic Jaguar",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Gorgon Hydra",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dawnbringer Pegasus",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Wrathfire Pegasus",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Skybreaker Pegasus",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Pegasus",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Glacier Wyrm",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Bog Tyrant",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Crimson Fang",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Bumblebee",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Primal Demonosaur",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Pallbearer",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Shadow Guardian",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Shadow Spirit",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Regal Guardian",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Freki Guardian",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Freki Phantom",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Freki Runed",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Freki Lord",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Dark Spirit",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "White Draptor",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "White Scorpion",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "King Horse",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Infernum Draptor",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Hottentotta",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Transcendence": 0.2,
+      "Onslaught": 0.1,
+      "Experiência bonus": 1
+    }
+  },
+  {
+    "nome": "Infernum Panther",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Tityus Serrulatus",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Transcendence": 0.2,
+      "Onslaught": 0.1,
+      "Experiência bonus": 1
+    }
+  },
+  {
+    "nome": "Shadowmane",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Transcendence": 0.2,
+      "Onslaught": 0.1,
+      "Experiência bonus": 1
+    }
+  },
+  {
+    "nome": "Cerulean Spirit",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Transcendence": 0.2,
+      "Onslaught": 0.1,
+      "Experiência bonus": 1
+    }
+  },
+  {
+    "nome": "Flamestrider",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Transcendence": 0.2,
+      "Onslaught": 0.1,
+      "Experiência bonus": 1
+    }
+  },
+  {
+    "nome": "Duskfang",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  },
+  {
+    "nome": "Snowshadow",
+    "bonusMale": null,
+    "bonusFemale": null,
+    "bonusNeutral": {
+      "Experiência bonus": 0.1,
+      "Max Hitpoints": 0.1,
+      "Max Manapoints": 0.1
+    }
+  }
+]
