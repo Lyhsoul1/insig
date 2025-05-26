@@ -88,9 +88,9 @@
 
   <label for="weaponType">Tipo de Exercise Weapon:</label>
   <select id="weaponType">
-    <option value="normal">Normal (200 hits)</option>
-    <option value="durable">Durable (400 hits)</option>
-    <option value="lasting">Lasting (800 hits)</option>
+    <option value="normal">Normal (500 cargas)</option>
+    <option value="durable">Durable (1800 cargas)</option>
+    <option value="lasting">Lasting (14400 cargas)</option>
   </select>
 
   <label for="trainMode">Modo de Treino:</label>
@@ -105,9 +105,9 @@
     <option value="yes">Sim</option>
   </select>
 
-  <label for="excited">
-    <input type="checkbox" id="excited" />
-    Treinando excitado (velocidade reduzida)
+  <label for="doubleSkill">
+    <input type="checkbox" id="doubleSkill" />
+    Double Skill ativo (treina 2x mais rápido)
   </label>
 
   <button id="calcBtn">Calcular</button>
@@ -124,13 +124,13 @@
       { max: 59, hits: 40 },
       { max: 69, hits: 16 },
       { max: 79, hits: 10 },
-      { max: 120, hits: 4 } // Para skill 80 em diante
+      { max: 120, hits: 4 }
     ];
 
     const weaponDurability = {
-      normal: 200,
-      durable: 400,
-      lasting: 800
+      normal: 500,
+      durable: 1800,
+      lasting: 14400
     };
 
     const baseTimePerHit = 1.5; // segundos por hit
@@ -141,7 +141,7 @@
       const weaponType = document.getElementById('weaponType').value;
       const trainMode = document.getElementById('trainMode').value;
       const premium = document.getElementById('premium').value;
-      const excited = document.getElementById('excited').checked;
+      const doubleSkill = document.getElementById('doubleSkill').checked;
 
       if (isNaN(currentSkill) || currentSkill < 1 || currentSkill > 120) {
         result.textContent = 'Informe um Skill Atual válido (1 a 120).';
@@ -152,11 +152,9 @@
         return;
       }
 
-      // Calcula hits necessários para subir do skill atual até o alvo
       function hitsForSkillRange(start, end) {
         let hits = 0;
         let s = start;
-
         while (s < end) {
           let stage = stageMultipliers.find(stage => s <= stage.max);
           hits += stage.hits;
@@ -165,30 +163,21 @@
         return hits;
       }
 
-      const totalHits = hitsForSkillRange(currentSkill, targetSkill);
+      let totalHits = hitsForSkillRange(currentSkill, targetSkill);
 
-      // Durabilidade da arma
+      if (doubleSkill) {
+        totalHits /= 2;
+      }
+
       const durability = weaponDurability[weaponType];
-
-      // Quantas armas serão gastas
       const weaponsUsed = Math.ceil(totalHits / durability);
 
-      // Modificadores de tempo
-      let timeModifier = 1; // base
-
-      // Treino offline é mais lento
+      let timeModifier = 1;
       if (trainMode === 'offline') timeModifier *= 1.3;
-
-      // Premium é mais rápido
       if (premium === 'yes') timeModifier *= 0.8;
 
-      // Treino excitado reduz velocidade (mais lento)
-      if (excited) timeModifier *= 1.5;
-
-      // Tempo total em segundos
       const totalTimeSeconds = totalHits * baseTimePerHit * timeModifier;
 
-      // Converter tempo para horas, minutos e segundos
       function formatTime(seconds) {
         const h = Math.floor(seconds / 3600);
         seconds %= 3600;
@@ -203,9 +192,8 @@
         `Tipo de Exercise Weapon: ${weaponType.charAt(0).toUpperCase() + weaponType.slice(1)}\n` +
         `Modo de treino: ${trainMode.charAt(0).toUpperCase() + trainMode.slice(1)}\n` +
         `Premium: ${premium === 'yes' ? 'Sim' : 'Não'}\n` +
-        `Treinando excitado: ${excited ? 'Sim' : 'Não'}\n\n` +
-
-        `Hits necessários para atingir o skill: ${totalHits}\n` +
+        `Double Skill ativo: ${doubleSkill ? 'Sim' : 'Não'}\n\n` +
+        `Hits necessários para atingir o skill: ${Math.ceil(totalHits)}\n` +
         `Quantidade de Exercise Weapons usadas: ${weaponsUsed}\n` +
         `Tempo estimado para atingir o skill: ${formatTime(totalTimeSeconds)}`;
     });
