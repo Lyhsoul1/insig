@@ -1,93 +1,348 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de Treino de Skills</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
-    h1 { text-align: center; }
-    label, select, input { display: block; margin-top: 10px; }
-    #resultado { margin-top: 20px; background: #f0f0f0; padding: 15px; border-radius: 5px; }
-  </style>
+<meta charset="UTF-8" />
+<title>Calculadora de Treino de Skill - Exercise Weapons</title>
+<style>
+  body {
+    background: #0d1117;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.5;
+  }
+  h1 {
+    color: #58a6ff;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #58a6ff;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    max-width: 300px;
+  }
+  select, input[type="number"], input[type="checkbox"] {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #222;
+    width: 100%;
+    max-width: 300px;
+  }
+  button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #238636;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px #2ea043;
+    transition: background-color 0.3s ease;
+    max-width: 320px;
+    width: 100%;
+  }
+  button:hover {
+    background-color: #2ea043;
+  }
+  .result {
+    margin-top: 30px;
+    background: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    white-space: pre-wrap;
+    min-height: 120px;
+  }
+  a {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #58a6ff;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body>
-  <h1>Calculadora de Treino de Skills</h1>
 
-  <label for="vocacao">Vocação:</label>
-  <select id="vocacao">
-    <option>Knight</option>
-    <option>Paladin</option>
-    <option>Sorcerer</option>
-    <option>Druid</option>
-    <option>Monk</option>
-  </select>
+<h1>Calculadora de Treino de Skill - Exercise Weapons</h1>
 
-  <label for="skill">Tipo de Skill:</label>
-  <select id="skill">
-    <option value="magic">Magic Level</option>
-    <option value="melee">Melee</option>
-    <option value="distance">Distance</option>
-    <option value="shielding">Shielding</option>
-    <option value="fist">Fist</option>
-  </select>
+<label for="vocation">Vocação:</label>
+<select id="vocation">
+  <option value="knight">Knight</option>
+  <option value="paladin">Paladin</option>
+  <option value="sorcerer">Sorcerer</option>
+  <option value="druid" selected>Druid</option>
+  <option value="monk">Monk</option>
+</select>
 
-  <label for="skillAtual">Skill Atual:</label>
-  <input type="number" id="skillAtual" min="0" max="200" value="80">
+<label for="skill">Tipo de Skill:</label>
+<select id="skill">
+  <option value="fist">Fist Fighting</option>
+  <option value="axe">Axe/Club/Sword</option>
+  <option value="distance">Distance Fighting</option>
+  <option value="magic" selected>Magic Level</option>
+  <option value="shielding">Shielding</option>
+</select>
 
-  <label for="skillDesejado">Skill Desejado:</label>
-  <input type="number" id="skillDesejado" min="1" max="200" value="85">
+<label for="currentSkill">Skill Atual (1 - 120):</label>
+<input type="number" id="currentSkill" min="1" max="120" value="80" />
 
-  <button onclick="calcular()">Calcular</button>
+<label for="percentageLeft">% Skill Restante:</label>
+<input type="number" id="percentageLeft" min="1" max="100" value="100" />
 
-  <div id="resultado"></div>
+<label for="targetSkill">Skill Desejado (maior que Atual):</label>
+<input type="number" id="targetSkill" min="1" max="120" value="85" />
 
-  <script>
-    const constantes = {
-      magic: { A: 1600, voc: { Knight: 3.0, Paladin: 1.4, Sorcerer: 1.1, Druid: 1.1, Monk: 1.25 }, offset: 0 },
-      melee: { A: 50, voc: { Knight: 1.1, Paladin: 1.2, Sorcerer: 2.0, Druid: 1.8, Monk: 1.4 }, offset: 10 },
-      distance: { A: 30, voc: { Knight: 1.4, Paladin: 1.1, Sorcerer: 2.0, Druid: 1.8, Monk: 1.5 }, offset: 10 },
-      shielding: { A: 100, voc: { Knight: 1.1, Paladin: 1.1, Sorcerer: 1.5, Druid: 1.5, Monk: 1.15 }, offset: 10 },
-      fist: { A: 50, voc: { Knight: 1.1, Paladin: 1.2, Sorcerer: 1.5, Druid: 1.5, Monk: 1.1 }, offset: 10 }
-    };
+<label for="loyalty">Loyalty Bonus (%):</label>
+<select id="loyalty">
+  <option value="0">Nenhum</option>
+  <option value="5">5%</option>
+  <option value="10">10%</option>
+  <option value="15">15%</option>
+  <option value="20">20%</option>
+  <option value="25">25%</option>
+  <option value="30">30%</option>
+  <option value="35">35%</option>
+  <option value="40">40%</option>
+  <option value="45">45%</option>
+  <option value="50">50%</option>
+</select>
 
-    const xpPorCarga = 660; // XP por uso de uma carga de Exercise Weapon
-    const cargaPorArma = 500;
-    const horasPorLasting = 8;
+<label><input type="checkbox" id="dummy" checked /> Usar Exercise Dummy (offline training)</label>
+<label><input type="checkbox" id="doubleEvent" /> Double Skill Event (2x)</label>
 
-    function calcular() {
-      const vocacao = document.getElementById("vocacao").value;
-      const skill = document.getElementById("skill").value;
-      const atual = parseInt(document.getElementById("skillAtual").value);
-      const desejado = parseInt(document.getElementById("skillDesejado").value);
+<label for="weaponType">Tipo de Exercise Weapon:</label>
+<select id="weaponType">
+  <option value="normal">Normal (500 cargas)</option>
+  <option value="durable">Durable (1800 cargas)</option>
+  <option value="lasting" selected>Lasting (14400 cargas)</option>
+</select>
 
-      const { A, voc, offset } = constantes[skill];
-      const b = voc[vocacao];
+<button id="calcBtn">Calcular</button>
 
-      let totalXP = 0;
-      for (let lvl = atual; lvl < desejado; lvl++) {
-        totalXP += A * b * Math.pow((lvl - offset), 2);
-      }
+<div class="result" id="result">Resultado aparecerá aqui.</div>
 
-      const cargasNecessarias = Math.ceil(totalXP / xpPorCarga);
-      const armasRegulares = Math.ceil(cargasNecessarias / cargaPorArma);
-      const lastingArmas = Math.ceil((cargasNecessarias * 2) / (cargaPorArma * horasPorLasting));
+<a href="index.html">&larr; Voltar ao Menu Principal</a>
 
-      const tempoTotalHoras = cargasNecessarias / (cargaPorArma / horasPorLasting);
-      const horas = Math.floor(tempoTotalHoras);
-      const minutos = Math.round((tempoTotalHoras - horas) * 60);
+<script>
+  // XP base para cada skill level do Tibia (Tibia Fandom XP Table)
+  const xpForSkillLevel = [
+    0,  50,  130,  210,  290,  380,  480,  600,  750,  930,
+    1150, 1400, 1700, 2050, 2450, 2900, 3400, 3950, 4550, 5200,
+    5900, 6650, 7450, 8300, 9200, 10150, 11150, 12200, 13300, 14450,
+    15650, 16900, 18200, 19550, 20950, 22400, 23900, 25450, 27050, 28700,
+    30400, 32150, 33950, 35800, 37700, 39650, 41650, 43700, 45800, 47950,
+    50150, 52400, 54700, 57050, 59450, 61900, 64400, 66950, 69550, 72200,
+    74900, 77650, 80450, 83300, 86200, 89150, 92150, 95200, 98300, 101450,
+    104650, 107900, 111200, 114550, 117950, 121400, 124900, 128450, 132050, 135700,
+    139400, 143150, 146950, 150800, 154700, 158650, 162650, 166700, 170800, 174950,
+    179150, 183400, 187700, 192050, 196450, 200900, 205400, 209950, 214550, 219200,
+    223900, 228650, 233450, 238300, 243200, 248150, 253150, 258200, 263300, 268450,
+    273650, 278900, 284200, 289550, 294950, 300400, 305900, 311450, 317050, 322700,
+    328400, 334150
+  ];
 
-      document.getElementById("resultado").innerHTML = `
-        <strong>Vocação:</strong> ${vocacao}<br>
-        <strong>Tipo de Skill:</strong> ${skill}<br>
-        <strong>Skill Atual:</strong> ${atual}<br>
-        <strong>Skill Desejado:</strong> ${desejado}<br>
-        <strong>XP necessário:</strong> ${totalXP.toLocaleString()}<br>
-        <strong>Armas Regulares Necessárias:</strong> ${armasRegulares}<br>
-        <strong>Armas Lasting Necessárias:</strong> ${lastingArmas}<br>
-        <strong>Tempo Estimado:</strong> ${horas}h ${minutos}m
-      `;
+  // Skill training multipliers por vocação e skill (rates do Tibia Global)
+  // fonte: https://tibia.fandom.com/wiki/Skills#Skill_training
+  // Valores representam a quantidade de skill % que 1 hit de exercise weapon treina no skill, multiplicador base para magic shielding e magic level.
+  // Ajustado para refletir a velocidade de treino do skill para cada vocação
+  const skillTrainingRates = {
+    knight: {
+      fist: 0.1,
+      axe: 0.15,
+      distance: 0.07,
+      magic: 0.02,
+      shielding: 0.05
+    },
+    paladin: {
+      fist: 0.07,
+      axe: 0.10,
+      distance: 0.15,
+      magic: 0.05,
+      shielding: 0.03
+    },
+    sorcerer: {
+      fist: 0.04,
+      axe: 0.05,
+      distance: 0.06,
+      magic: 0.45,
+      shielding: 0.10
+    },
+    druid: {
+      fist: 0.03,
+      axe: 0.04,
+      distance: 0.05,
+      magic: 0.50,
+      shielding: 0.12
+    },
+    monk: {
+      fist: 0.05,
+      axe: 0.10,
+      distance: 0.08,
+      magic: 0.07,
+      shielding: 0.05
     }
-  </script>
+  };
+
+  // Carga por tipo de arma
+  const weaponCharges = {
+    normal: 500,
+    durable: 1800,
+    lasting: 14400
+  };
+
+  // Custo fictício por hit (para exibir) - pode ajustar conforme necessário
+  const baseCostPerHit = 14; // só exemplo
+
+  // Função para XP total necessária entre 2 níveis de skill (linear interpola a % restante do skill atual)
+  function getXPNeeded(currentSkill, currentPercent, targetSkill) {
+    if (targetSkill > 120) targetSkill = 120;
+    if (currentSkill >= targetSkill) return 0;
+    
+    // XP até skill atual + % restante (ex: 80.5%)
+    let currentXP = xpForSkillLevel[Math.floor(currentSkill)] || 0;
+    let nextLevelXP = xpForSkillLevel[Math.min(Math.floor(currentSkill)+1,120)] || 0;
+    let currentXPExact = currentXP + ((nextLevelXP - currentXP) * (currentPercent / 100));
+    
+    // XP até skill alvo (inteiro)
+    let targetXP = xpForSkillLevel[targetSkill] || 0;
+
+    return Math.max(0, targetXP - currentXPExact);
+  }
+
+  // Calcula hits necessários para treinar XP, com base na vocação e skill (cada hit dá skillTrainingRates de skill%)
+  // Fórmula baseada em skill% por hit e XP necessário por skill% no intervalo
+  function calculateHitsNeeded(vocation, skillType, currentSkill, targetSkill, currentPercent) {
+    let xpNeeded = getXPNeeded(currentSkill, currentPercent, targetSkill);
+    if (xpNeeded === 0) return {hits: 0, xpNeeded: 0};
+
+    // Cada hit treina skill % * valor de skill que corresponde a 1% de skill (aproximadamente xpForSkillLevel atual)
+    // Como a XP para cada skill% varia, vamos calcular skill% necessário e converter em hits via taxa da vocação e skill.
+    // Para simplificar:
+    // skill % needed = targetSkill - currentSkill - (currentPercent / 100)
+    let skillPercentNeeded = (targetSkill - currentSkill) - (currentPercent / 100);
+    if (skillPercentNeeded < 0) skillPercentNeeded = 0;
+
+    // Como XP é a métrica oficial, convertemos XP para skill% (baseado na diferença entre xpForSkillLevel)
+    // Vamos usar skillPercentNeeded e dividir por skillTrainingRate para obter hits
+
+    // Hits = skillPercentNeeded / skillTrainingRate[vocation][skillType]
+    let rate = skillTrainingRates[vocation][skillType];
+    if (!rate) rate = 0.1; // default para evitar NaN
+
+    let hits = skillPercentNeeded / rate;
+
+    return {hits: Math.ceil(hits), xpNeeded: xpNeeded};
+  }
+
+  // Formata tempo dado em segundos para H M S
+  function formatTime(seconds) {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = Math.floor(seconds % 60);
+    return `${h}h ${m}m ${s}s`;
+  }
+
+  // Evento do botão
+  document.getElementById('calcBtn').addEventListener('click', () => {
+    const vocation = document.getElementById('vocation').value;
+    const skill = document.getElementById('skill').value;
+    const currentSkill = parseInt(document.getElementById('currentSkill').value);
+    const targetSkill = parseInt(document.getElementById('targetSkill').value);
+    const percentageLeft = parseFloat(document.getElementById('percentageLeft').value);
+    const loyalty = parseInt(document.getElementById('loyalty').value);
+    const dummy = document.getElementById('dummy').checked;
+    const doubleEvent = document.getElementById('doubleEvent').checked;
+    const weaponType = document.getElementById('weaponType').value;
+
+    if(currentSkill >= targetSkill) {
+      document.getElementById('result').textContent = 'Skill desejado deve ser maior que o skill atual.';
+      return;
+    }
+    if(percentageLeft <= 0 || percentageLeft > 100) {
+      document.getElementById('result').textContent = 'Porcentagem restante deve estar entre 1 e 100.';
+      return;
+    }
+
+    // Calcular hits necessários
+    const {hits, xpNeeded} = calculateHitsNeeded(vocation, skill, currentSkill, targetSkill, percentageLeft);
+
+    // Ajusta hits para dummy (offline) - dummy permite 100% de hits aproveitados
+    // Sem dummy, a taxa é reduzida pra metade, então dobrar hits.
+    const hitsAdjusted = dummy ? hits : hits * 2;
+
+    // Aplica bonus loyalty: reduz hits necessários proporcionalmente
+    const hitsWithLoyalty = Math.ceil(hitsAdjusted * (1 - (loyalty / 100)));
+
+    // Aplica double event: reduz hits pela metade
+    const hitsFinal = doubleEvent ? Math.ceil(hitsWithLoyalty / 2) : hitsWithLoyalty;
+
+    // Carga da arma
+    const chargesPerWeapon = weaponCharges[weaponType] || 500;
+
+    // Quantidade de armas necessárias (hits / cargas por arma)
+    const weaponsNeeded = Math.ceil(hitsFinal / chargesPerWeapon);
+
+    // Custo aproximado - só exemplo
+    const cost = hitsFinal * baseCostPerHit;
+
+    // Tempo estimado - supondo 1 hit por 6 segundos (10 hits/minuto) 
+    // Ajustar para exercício real: 1 hit = 6s é uma média comum, pode ser ajustado conforme o Exevopan que é em torno de 5-6s por hit
+    const secondsPerHit = 6;
+
+    const totalSeconds = hitsFinal * secondsPerHit;
+
+    // Monta resultado
+    let resultText = `Vocação: ${capitalize(vocation)}\n`;
+    resultText += `Tipo de Skill: ${capitalizeSkill(skill)}\n`;
+    resultText += `Skill Atual: ${currentSkill}\n`;
+    resultText += `Skill Desejado: ${targetSkill}\n`;
+    resultText += `XP necessário: ${xpNeeded.toLocaleString('pt-BR')}\n`;
+    resultText += `Hits Necessários: ${hitsFinal.toLocaleString('pt-BR')}\n`;
+    resultText += `Exercise Weapons Necessárias: ${weaponsNeeded}\n`;
+    resultText += `Custo Estimado: ${cost.toLocaleString('pt-BR')} gold\n`;
+    resultText += `Tempo Estimado: ${formatTime(totalSeconds)}\n`;
+    resultText += `\nParâmetros:\n`;
+    resultText += `- Dummy (offline training): ${dummy ? 'Sim' : 'Não'}\n`;
+    resultText += `- Double Skill Event: ${doubleEvent ? 'Sim' : 'Não'}\n`;
+    resultText += `- Loyalty Bonus: ${loyalty}%\n`;
+    resultText += `- Exercise Weapon: ${capitalizeWeapon(weaponType)} (${chargesPerWeapon} cargas)\n`;
+
+    document.getElementById('result').textContent = resultText;
+  });
+
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  function capitalizeSkill(str) {
+    if(str === 'fist') return 'Fist Fighting';
+    if(str === 'axe') return 'Axe/Club/Sword';
+    if(str === 'distance') return 'Distance Fighting';
+    if(str === 'magic') return 'Magic Level';
+    if(str === 'shielding') return 'Shielding';
+    return str;
+  }
+  function capitalizeWeapon(str) {
+    if(str === 'normal') return 'Normal';
+    if(str === 'durable') return 'Durable';
+    if(str === 'lasting') return 'Lasting';
+    return str;
+  }
+</script>
+
 </body>
 </html>
