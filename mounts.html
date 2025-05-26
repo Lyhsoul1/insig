@@ -14,6 +14,7 @@
       color: #e0e0e0;
       text-shadow: 1px 1px 2px #000;
     }
+
     button#voltar {
       margin-bottom: 20px;
       padding: 8px 12px;
@@ -26,13 +27,26 @@
       box-shadow: 0 0 5px #4a7bd5;
       transition: background-color 0.3s ease;
     }
+
     button#voltar:hover {
       background-color:#3a7bd5;
     }
+
     h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
+
+    .mensagem {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-left: 5px solid #00ffd6;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
     #mounts {
       display: flex;
       flex-wrap: wrap;
@@ -42,13 +56,25 @@
       border-radius: 8px;
       padding: 15px;
     }
+
     .mount-item {
       background: #444;
       padding: 10px;
       border-radius: 6px;
       flex: 1 1 150px;
       box-shadow: 0 0 5px #00ffd6;
+      transition: transform 0.2s ease, background-color 0.2s ease;
     }
+
+    .mount-item:hover {
+      transform: scale(1.03);
+      background-color: #555;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
     #resultado {
       background: rgba(0, 0, 0, 0.7);
       padding: 15px;
@@ -62,69 +88,75 @@
 </head>
 <body>
 
-<button id="voltar" onclick="window.location.href='index.html'">← Voltar ao Menu</button>
+  <button id="voltar" onclick="window.location.href='index.html'">← Voltar ao Menu</button>
 
-<h1>Calculadora de Bônus de Montarias</h1>
+  <h1>Calculadora de Bônus de Montarias</h1>
 
-<div id="mounts">Carregando montarias...</div>
+  <div class="mensagem">
+    Quanto às montarias, todas oferecem um bônus padrão de <strong>0.10% de exp extra</strong>.
+    Assim como os bônus de outfit, os bônus das montarias também são <strong>cumulativos</strong>,
+    proporcionando um incentivo adicional para colecioná-las.
+  </div>
 
-<h2>Bônus totais:</h2>
-<div id="resultado">{}</div>
+  <div id="mounts">Carregando montarias...</div>
 
-<script>
-let dadosMounts = [];
+  <h2>Bônus totais:</h2>
+  <div id="resultado">{}</div>
 
-async function carregarMounts() {
-  try {
-    const res = await fetch('mounts.json');
-    if (!res.ok) throw new Error('Erro ao carregar mounts.json: ' + res.status);
-    dadosMounts = await res.json();
+  <script>
+    let dadosMounts = [];
 
-    const container = document.getElementById('mounts');
-    container.innerHTML = '';
+    async function carregarMounts() {
+      try {
+        const res = await fetch('mounts.json');
+        if (!res.ok) throw new Error('Erro ao carregar mounts.json: ' + res.status);
+        dadosMounts = await res.json();
 
-    dadosMounts.forEach((mount, index) => {
-      const div = document.createElement('div');
-      div.className = 'mount-item';
-      div.innerHTML = `
-        <label>
-          <input type="checkbox" data-index="${index}"> ${mount.nome}
-        </label>
-      `;
-      container.appendChild(div);
-    });
+        const container = document.getElementById('mounts');
+        container.innerHTML = '';
 
-    document.querySelectorAll('input[type=checkbox]').forEach(cb => {
-      cb.addEventListener('change', atualizarBonus);
-    });
+        dadosMounts.forEach((mount, index) => {
+          const div = document.createElement('div');
+          div.className = 'mount-item';
+          div.innerHTML = `
+            <label>
+              <input type="checkbox" data-index="${index}"> ${mount.nome}
+            </label>
+          `;
+          container.appendChild(div);
+        });
 
-    atualizarBonus();
-  } catch (e) {
-    document.getElementById('mounts').textContent = 'Erro ao carregar montarias.';
-    console.error(e);
-  }
-}
+        document.querySelectorAll('input[type=checkbox]').forEach(cb => {
+          cb.addEventListener('change', atualizarBonus);
+        });
 
-function atualizarBonus() {
-  const selecionados = [...document.querySelectorAll('input[type=checkbox]:checked')]
-    .map(cb => parseInt(cb.dataset.index));
-
-  const total = {};
-
-  selecionados.forEach(i => {
-    const mount = dadosMounts[i];
-    const bonus = mount.bonusNeutral || {};
-
-    for (const [chave, valor] of Object.entries(bonus)) {
-      total[chave] = (total[chave] || 0) + valor;
+        atualizarBonus();
+      } catch (e) {
+        document.getElementById('mounts').textContent = 'Erro ao carregar montarias.';
+        console.error(e);
+      }
     }
-  });
 
-  document.getElementById('resultado').textContent = JSON.stringify(total, null, 2);
-}
+    function atualizarBonus() {
+      const selecionados = [...document.querySelectorAll('input[type=checkbox]:checked')]
+        .map(cb => parseInt(cb.dataset.index));
 
-carregarMounts();
-</script>
+      const total = {};
+
+      selecionados.forEach(i => {
+        const mount = dadosMounts[i];
+        const bonus = mount.bonusNeutral || {};
+
+        for (const [chave, valor] of Object.entries(bonus)) {
+          total[chave] = (total[chave] || 0) + valor;
+        }
+      });
+
+      document.getElementById('resultado').textContent = JSON.stringify(total, null, 2);
+    }
+
+    carregarMounts();
+  </script>
 
 </body>
 </html>
