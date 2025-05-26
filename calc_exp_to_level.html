@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Calculadora de EXP para Level - Calculadora de Bônus</title>
+<style>
+  body {
+    background: #0d1117;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  h1 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-top: 20px;
+  }
+  input[type=number] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 200px;
+  }
+  button {
+    margin-top: 30px;
+    background: #238636;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #2ea043;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background: #2ea043;
+  }
+  .result {
+    margin-top: 30px;
+    font-size: 20px;
+    background: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 40px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<h1>Quanto de EXP falta para o level desejado</h1>
+
+<label for="currentLevel">Seu level atual:</label>
+<input type="number" id="currentLevel" min="1" max="999" value="100" />
+
+<label for="targetLevel">Level alvo:</label>
+<input type="number" id="targetLevel" min="1" max="999" value="120" />
+
+<button onclick="calcularExpFaltante()">Calcular EXP faltante</button>
+
+<div class="result" id="resultado"></div>
+
+<a href="index.html">&larr; Voltar ao menu principal</a>
+
+<script>
+// Exemplo de cálculo de experiência em OT classic (usar fórmula ou tabela)
+// Fórmula clássica Tibia (simplificada):
+// totalExp(level) = 50 * (level-1) * (level^2 - level)
+// Para simplificar, vou usar a fórmula do Tibia:
+function expTotal(level) {
+  return 50 * (level - 1) * (level * level - level);
+}
+
+function calcularExpFaltante() {
+  const current = parseInt(document.getElementById('currentLevel').value);
+  const target = parseInt(document.getElementById('targetLevel').value);
+  if (isNaN(current) || isNaN(target) || current < 1 || target <= current) {
+    alert('Níveis inválidos: o level alvo deve ser maior que o atual.');
+    return;
+  }
+  const expCurrent = expTotal(current);
+  const expTarget = expTotal(target);
+  const faltante = expTarget - expCurrent;
+
+  document.getElementById('resultado').innerHTML = `
+    Para subir do level <strong>${current}</strong> ao level <strong>${target}</strong>,<br />
+    você precisa de <strong>${faltante.toLocaleString()}</strong> de experiência.
+  `;
+}
+</script>
+
+</body>
+</html>
