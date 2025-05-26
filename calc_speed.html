@@ -69,10 +69,10 @@
 <h1>Calculadora de Velocidade</h1>
 
 <label for="level">Level do personagem:</label>
-<input type="number" id="level" min="1" max="999" value="100" />
+<input type="number" id="level" min="1" max="999" value="8" oninput="atualizarVelocidadeBase()" />
 
 <label for="baseSpeed">Velocidade base (sem bônus):</label>
-<input type="number" id="baseSpeed" min="100" max="500" value="220" />
+<input type="number" id="baseSpeed" readonly />
 
 <label for="speedBonus">Bônus de velocidade (ex: mount, spell):</label>
 <input type="number" id="speedBonus" min="0" max="200" value="0" />
@@ -84,6 +84,16 @@
 <a href="index.html">&larr; Voltar ao menu principal</a>
 
 <script>
+function atualizarVelocidadeBase() {
+  const level = parseInt(document.getElementById('level').value);
+  if (!isNaN(level) && level >= 1) {
+    const speed = 220 + Math.floor((level - 1) * 2);
+    document.getElementById('baseSpeed').value = speed;
+  } else {
+    document.getElementById('baseSpeed').value = '';
+  }
+}
+
 function calcularVelocidade() {
   const level = parseInt(document.getElementById('level').value);
   const baseSpeed = parseInt(document.getElementById('baseSpeed').value);
@@ -94,7 +104,7 @@ function calcularVelocidade() {
     return;
   }
   if(isNaN(baseSpeed) || baseSpeed < 100) {
-    alert('Insira uma velocidade base válida (mínimo 100).');
+    alert('Velocidade base inválida.');
     return;
   }
   if(isNaN(bonus) || bonus < 0) {
@@ -102,13 +112,15 @@ function calcularVelocidade() {
     return;
   }
 
-  // Fórmula simples: velocidade final = baseSpeed + bonus + (level / 2)
-  const finalSpeed = baseSpeed + bonus + Math.floor(level / 2);
+  const finalSpeed = baseSpeed + bonus;
 
   document.getElementById('resultado').innerHTML = `
     <strong>Velocidade final:</strong> ${finalSpeed} squares por segundo (aprox.)
   `;
 }
+
+// Atualizar automaticamente ao carregar a página
+window.onload = atualizarVelocidadeBase;
 </script>
 
 </body>
