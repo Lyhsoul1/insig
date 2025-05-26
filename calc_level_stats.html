@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Informações por Level - Tibia Global</title>
+  <meta charset="UTF-8">
+  <title>Calculadora de Atributos - Tibia Global</title>
   <style>
     body {
       background: #0d1117;
@@ -101,39 +101,48 @@ function calcular() {
     return;
   }
 
-  let baseHP = 150, baseMP = 5, baseCap = 400;
-  let hpGain = 5, mpGain = 5, capGain = 10;
+  let hp = 150;
+  let mp = 5;
+  let cap = 400;
+
+  // Level 1 a 7 (sem vocação)
+  const preVocLevel = Math.min(level, 8) - 1;
+  hp += preVocLevel * 5;
+  mp += preVocLevel * 5;
+  cap += preVocLevel * 10;
+
+  // Do level 8 em diante, com vocação
+  const postVocLevel = Math.max(0, level - 8);
 
   switch (voc) {
     case 'none':
-      hpGain = 5;
-      mpGain = 5;
-      capGain = 10;
+      hp += postVocLevel * 5;
+      mp += postVocLevel * 5;
+      cap += postVocLevel * 10;
       break;
     case 'knight':
-      hpGain = 15;
-      mpGain = 5;
-      capGain = 25;
+      hp += postVocLevel * 15;
+      mp += postVocLevel * 5;
+      cap += postVocLevel * 25;
+      cap += 70; // Cap base bônus do Knight ao virar vocação
       break;
     case 'paladin':
-      hpGain = 10;
-      mpGain = 15;
-      capGain = 20;
+      hp += postVocLevel * 10;
+      mp += postVocLevel * 15;
+      cap += postVocLevel * 20;
+      cap += 70;
       break;
     case 'sorcerer':
     case 'druid':
-      hpGain = 5;
-      mpGain = 30;
-      capGain = 10;
+      hp += postVocLevel * 5;
+      mp += postVocLevel * 30;
+      cap += postVocLevel * 10;
+      cap += 70;
       break;
   }
 
-  const hp = baseHP + (level - 1) * hpGain;
-  const mp = baseMP + (level - 1) * mpGain;
-  const cap = baseCap + (level - 1) * capGain;
   const exp = expTotal(level).toLocaleString('pt-BR');
-
-  const nomeVoc = {
+  const vocName = {
     'none': 'Nenhuma',
     'knight': 'Knight',
     'paladin': 'Paladin',
@@ -142,7 +151,7 @@ function calcular() {
   }[voc];
 
   document.getElementById('resultado').innerHTML = `
-    <strong>Level ${level} - ${nomeVoc}</strong><br /><br />
+    <strong>Level ${level} - ${vocName}</strong><br /><br />
     <strong>Experiência necessária:</strong> ${exp}<br />
     <strong>Life:</strong> ${hp}<br />
     <strong>Mana:</strong> ${mp}<br />
