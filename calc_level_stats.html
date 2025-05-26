@@ -1,79 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<title>Calcule suas informações no Tibia</title>
-<style>
-  body {
-    background: #0d1117;
-    color: #f0f0f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 30px 20px;
-    max-width: 700px;
-    margin: auto;
-  }
-  h1 {
-    color: #58a6ff;
-    margin-bottom: 20px;
-  }
-  label {
-    display: block;
-    margin-top: 20px;
-  }
-  select, input[type=number] {
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: none;
-    margin-top: 5px;
-    width: 100%;
-    max-width: 250px;
-  }
-  button {
-    margin-top: 20px;
-    background: #238636;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 0 8px #2ea043;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
-  }
-  button:hover {
-    background: #2ea043;
-  }
-  .result {
-    margin-top: 30px;
-    font-size: 18px;
-    background: #161b22;
-    padding: 15px;
-    border-radius: 8px;
-  }
-  a {
-    color: #58a6ff;
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 40px;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <title>Informações por Level - Tibia Global</title>
+  <style>
+    body {
+      background: #0d1117;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 30px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      color: #58a6ff;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+    }
+    select, input[type=number] {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      margin-top: 5px;
+      width: 100%;
+      max-width: 250px;
+    }
+    button {
+      margin-top: 30px;
+      background: #238636;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #2ea043;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: #2ea043;
+    }
+    .result {
+      margin-top: 30px;
+      font-size: 20px;
+      background: #161b22;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-block;
+      margin-top: 40px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
 <h1>Calcule suas informações de um determinado level no Tibia</h1>
 
-<label for="level">Level:</label>
-<input type="number" id="level" min="1" max="999" value="100" />
+<label for="level">Level</label>
+<input type="number" id="level" min="1" max="2000" value="100" />
 
-<label for="voc">Vocação:</label>
-<select id="voc">
+<label for="vocation">Vocação</label>
+<select id="vocation">
   <option value="none">Nenhuma</option>
   <option value="knight">Knight</option>
   <option value="paladin">Paladin</option>
@@ -89,52 +88,62 @@
 <a href="index.html">&larr; Voltar ao menu principal</a>
 
 <script>
-function calcularExp(level) {
-  return Math.floor((50 * Math.pow(level, 3) - 150 * Math.pow(level, 2) + 400 * level) / 3);
+function expTotal(level) {
+  return Math.floor((50 * level * level * level) / 3 - 100 * level * level + (850 * level) / 3 - 200);
 }
 
 function calcular() {
   const level = parseInt(document.getElementById('level').value);
-  const voc = document.getElementById('voc').value;
+  const voc = document.getElementById('vocation').value;
 
-  if (isNaN(level) || level < 1) {
-    alert('Digite um level válido.');
+  if (isNaN(level) || level < 1 || level > 2000) {
+    alert('Insira um level válido entre 1 e 2000.');
     return;
   }
 
-  let hp = 150;
-  let mp = 50;
-  let cap = 470;
+  let baseHP = 150, baseMP = 5, baseCap = 400;
+  let hpGain = 5, mpGain = 5, capGain = 10;
 
   switch (voc) {
+    case 'none':
+      hpGain = 5;
+      mpGain = 5;
+      capGain = 10;
+      break;
     case 'knight':
-      hp = 185 + (level - 1) * 15;
-      mp = 40 + (level - 1) * 5;
-      cap = 470 + (level - 1) * 25;
+      hpGain = 15;
+      mpGain = 5;
+      capGain = 25;
       break;
     case 'paladin':
-      hp = 185 + (level - 1) * 10;
-      mp = 90 + (level - 1) * 10;
-      cap = 470 + (level - 1) * 20;
+      hpGain = 10;
+      mpGain = 15;
+      capGain = 20;
       break;
     case 'sorcerer':
     case 'druid':
-      hp = 145 + (level - 1) * 5;
-      mp = 90 + (level - 1) * 15;
-      cap = 470 + (level - 1) * 10;
-      break;
-    case 'none':
-    default:
-      hp = 150 + (level - 1) * 5;
-      mp = 50 + (level - 1) * 5;
-      cap = 470 + (level - 1) * 10;
+      hpGain = 5;
+      mpGain = 30;
+      capGain = 10;
       break;
   }
 
-  const exp = calcularExp(level).toLocaleString('pt-BR');
+  const hp = baseHP + (level - 1) * hpGain;
+  const mp = baseMP + (level - 1) * mpGain;
+  const cap = baseCap + (level - 1) * capGain;
+  const exp = expTotal(level).toLocaleString('pt-BR');
+
+  const nomeVoc = {
+    'none': 'Nenhuma',
+    'knight': 'Knight',
+    'paladin': 'Paladin',
+    'sorcerer': 'Sorcerer',
+    'druid': 'Druid'
+  }[voc];
 
   document.getElementById('resultado').innerHTML = `
-    <strong>Experiência necessária para o level ${level}:</strong> ${exp}<br />
+    <strong>Level ${level} - ${nomeVoc}</strong><br /><br />
+    <strong>Experiência necessária:</strong> ${exp}<br />
     <strong>Life:</strong> ${hp}<br />
     <strong>Mana:</strong> ${mp}<br />
     <strong>Capacidade:</strong> ${cap}
@@ -143,7 +152,7 @@ function calcular() {
 
 function limpar() {
   document.getElementById('level').value = '';
-  document.getElementById('voc').value = 'none';
+  document.getElementById('vocation').value = 'none';
   document.getElementById('resultado').innerHTML = '';
 }
 </script>
