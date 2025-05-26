@@ -108,9 +108,15 @@ function calcularExpFaltante() {
   `;
 
   if (!isNaN(dailyExp) && dailyExp > 0) {
-    const dias = Math.ceil(expFaltante / dailyExp);
-    resultado += `<br /><br />Com <strong>${dailyExp.toLocaleString()}</strong> de EXP por dia,<br />
-                  você levará aproximadamente <strong>${dias}</strong> dias para alcançar o level desejado. 🧙‍♂️`;
+    const expPorSegundo = dailyExp / 86400; // 86400 segundos em 24h
+    const segundosTotais = Math.ceil(expFaltante / expPorSegundo);
+
+    const horas = Math.floor(segundosTotais / 3600);
+    const minutos = Math.floor((segundosTotais % 3600) / 60);
+    const segundos = segundosTotais % 60;
+
+    resultado += `<br /><br />Com <strong>${dailyExp.toLocaleString()}</strong> de EXP por dia (contínuo),<br />
+                  você levará aproximadamente <strong>${horas}h ${minutos}min ${segundos}s</strong> para alcançar o level desejado. ⏳`;
   }
 
   document.getElementById('resultado').innerHTML = resultado;
