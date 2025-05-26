@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Calculadora de Skill - Calculadora de Bônus</title>
+<style>
+  body {
+    background: #0d1117;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  h1 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-top: 20px;
+  }
+  input[type=number] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 200px;
+  }
+  button {
+    margin-top: 30px;
+    background: #238636;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #2ea043;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background: #2ea043;
+  }
+  .result {
+    margin-top: 30px;
+    font-size: 20px;
+    background: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 40px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<h1>Calculadora de Skill</h1>
+
+<label for="currentSkill">Skill atual:</label>
+<input type="number" id="currentSkill" min="0" max="1200" value="300" />
+
+<label for="targetSkill">Skill alvo:</label>
+<input type="number" id="targetSkill" min="0" max="1200" value="350" />
+
+<button onclick="calcularSkill()">Calcular experiência necessária</button>
+
+<div class="result" id="resultado"></div>
+
+<a href="index.html">&larr; Voltar ao menu principal</a>
+
+<script>
+// Exemplo de cálculo de skill (simplificado)
+function skillExp(skill) {
+  return skill * skill * 10;
+}
+
+function calcularSkill() {
+  const current = parseInt(document.getElementById('currentSkill').value);
+  const target = parseInt(document.getElementById('targetSkill').value);
+
+  if (isNaN(current) || isNaN(target) || current < 0 || target <= current) {
+    alert('Valores inválidos: o skill alvo deve ser maior que o atual.');
+    return;
+  }
+
+  const expCurrent = skillExp(current);
+  const expTarget = skillExp(target);
+  const needed = expTarget - expCurrent;
+
+  document.getElementById('resultado').innerHTML = `
+    Para subir do skill <strong>${current}</strong> ao skill <strong>${target}</strong>,<br />
+    você precisa de <strong>${needed.toLocaleString()}</strong> pontos de experiência.
+  `;
+}
+</script>
+
+</body>
+</html>
