@@ -27,7 +27,7 @@
     border: none;
     margin-top: 5px;
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
   }
   button {
     margin-top: 30px;
@@ -66,13 +66,16 @@
 </head>
 <body>
 
-<h1>Quanto de EXP falta para o level desejado</h1>
+<h1>Calculadora de EXP até o próximo level</h1>
 
 <label for="currentLevel">Seu level atual:</label>
-<input type="number" id="currentLevel" min="1" max="999" value="100" />
+<input type="number" id="currentLevel" min="1" max="2000" value="500" />
 
 <label for="targetLevel">Level alvo:</label>
-<input type="number" id="targetLevel" min="1" max="999" value="120" />
+<input type="number" id="targetLevel" min="1" max="2000" value="700" />
+
+<label for="dailyExp">EXP que você faz por dia (opcional):</label>
+<input type="number" id="dailyExp" min="0" value="100000000" />
 
 <button onclick="calcularExpFaltante()">Calcular EXP faltante</button>
 
@@ -81,29 +84,36 @@
 <a href="index.html">&larr; Voltar ao menu principal</a>
 
 <script>
-// Exemplo de cálculo de experiência em OT classic (usar fórmula ou tabela)
-// Fórmula clássica Tibia (simplificada):
-// totalExp(level) = 50 * (level-1) * (level^2 - level)
-// Para simplificar, vou usar a fórmula do Tibia:
-function expTotal(level) {
-  return 50 * (level - 1) * (level * level - level);
+function totalExp(level) {
+  return Math.floor((50 * Math.pow(level, 3) - 150 * Math.pow(level, 2) + 400 * level) / 3);
 }
 
 function calcularExpFaltante() {
-  const current = parseInt(document.getElementById('currentLevel').value);
-  const target = parseInt(document.getElementById('targetLevel').value);
-  if (isNaN(current) || isNaN(target) || current < 1 || target <= current) {
-    alert('Níveis inválidos: o level alvo deve ser maior que o atual.');
+  const currentLevel = parseInt(document.getElementById('currentLevel').value);
+  const targetLevel = parseInt(document.getElementById('targetLevel').value);
+  const dailyExp = parseInt(document.getElementById('dailyExp').value);
+
+  if (isNaN(currentLevel) || isNaN(targetLevel) || currentLevel < 1 || targetLevel <= currentLevel) {
+    alert('Insira níveis válidos (o alvo deve ser maior que o atual).');
     return;
   }
-  const expCurrent = expTotal(current);
-  const expTarget = expTotal(target);
-  const faltante = expTarget - expCurrent;
 
-  document.getElementById('resultado').innerHTML = `
-    Para subir do level <strong>${current}</strong> ao level <strong>${target}</strong>,<br />
-    você precisa de <strong>${faltante.toLocaleString()}</strong> de experiência.
+  const expAtual = totalExp(currentLevel);
+  const expAlvo = totalExp(targetLevel);
+  const expFaltante = expAlvo - expAtual;
+
+  let resultado = `
+    Para subir do level <strong>${currentLevel}</strong> ao level <strong>${targetLevel}</strong>,<br />
+    você precisa de <strong>${expFaltante.toLocaleString()}</strong> de experiência.
   `;
+
+  if (!isNaN(dailyExp) && dailyExp > 0) {
+    const dias = Math.ceil(expFaltante / dailyExp);
+    resultado += `<br /><br />Com <strong>${dailyExp.toLocaleString()}</strong> de EXP por dia,<br />
+                  você levará aproximadamente <strong>${dias}</strong> dias para alcançar o level desejado. 🧙‍♂️`;
+  }
+
+  document.getElementById('resultado').innerHTML = resultado;
 }
 </script>
 
