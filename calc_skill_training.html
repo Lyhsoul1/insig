@@ -2,74 +2,73 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Calculadora de Treino de Skill - Exercise Weapons</title>
+  <title>Calculadora de Treino de Skill - Tibia</title>
   <style>
     body {
-      background: #0d1117;
+      background: linear-gradient(135deg, #0d1117, #1f2937);
       color: #f0f0f0;
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 20px;
-      line-height: 1.5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
     }
     h1 {
       color: #58a6ff;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       text-align: center;
-      font-weight: 900;
       text-shadow: 0 0 10px #58a6ff;
+    }
+    .calculator {
+      background: #161b22;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
+      max-width: 600px;
+      width: 100%;
     }
     label {
       display: block;
       margin-top: 15px;
-      font-size: 18px;
-      max-width: 300px;
+      font-size: 16px;
     }
     select, input[type="number"], input[type="checkbox"] {
-      padding: 8px 12px;
-      border-radius: 6px;
-      border: none;
-      margin-top: 8px;
-      font-size: 16px;
-      color: #222;
       width: 100%;
-      max-width: 300px;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
     }
     button {
-      margin-top: 30px;
-      padding: 12px 25px;
-      font-weight: bold;
-      font-size: 16px;
-      border-radius: 8px;
-      border: none;
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
       background-color: #238636;
       color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
       cursor: pointer;
-      box-shadow: 0 0 10px #2ea043;
       transition: background-color 0.3s ease;
-      max-width: 320px;
-      width: 100%;
     }
     button:hover {
       background-color: #2ea043;
     }
     .result {
-      margin-top: 30px;
-      background: #161b22;
-      padding: 15px;
-      border-radius: 8px;
-      font-size: 18px;
+      margin-top: 20px;
+      background: #0d1117;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 16px;
       white-space: pre-wrap;
-      min-height: 100px;
     }
     a {
       display: block;
-      margin-top: 40px;
+      margin-top: 30px;
       text-align: center;
-      text-decoration: none;
       color: #58a6ff;
-      font-weight: bold;
+      text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
@@ -78,129 +77,146 @@
 </head>
 <body>
 
-  <h1>Calculadora de Treino de Skill - Exercise Weapons</h1>
+  <h1>Calculadora de Treino de Skill - Tibia</h1>
 
-  <label for="currentSkill">Skill Atual (1 - 120):</label>
-  <input type="number" id="currentSkill" min="1" max="120" value="80" />
+  <div class="calculator">
+    <label for="vocation">Vocação:</label>
+    <select id="vocation">
+      <option value="knight">Knight</option>
+      <option value="paladin">Paladin</option>
+      <option value="sorcerer">Sorcerer</option>
+      <option value="druid">Druid</option>
+    </select>
 
-  <label for="targetSkill">Skill Alvo (maior que Atual):</label>
-  <input type="number" id="targetSkill" min="1" max="120" value="85" />
+    <label for="skillType">Tipo de Skill:</label>
+    <select id="skillType">
+      <option value="magic">Magic Level</option>
+      <option value="melee">Melee (Sword/Axe/Club)</option>
+      <option value="distance">Distance</option>
+      <option value="shielding">Shielding</option>
+    </select>
 
-  <label for="weaponType">Tipo de Exercise Weapon:</label>
-  <select id="weaponType">
-    <option value="normal">Normal (500 cargas)</option>
-    <option value="durable">Durable (1800 cargas)</option>
-    <option value="lasting">Lasting (14400 cargas)</option>
-  </select>
+    <label for="currentSkill">Skill Atual:</label>
+    <input type="number" id="currentSkill" min="1" max="120" value="80" />
 
-  <label for="trainMode">Modo de Treino:</label>
-  <select id="trainMode">
-    <option value="online">Online</option>
-    <option value="offline">Offline (estátua)</option>
-  </select>
+    <label for="targetSkill">Skill Desejado:</label>
+    <input type="number" id="targetSkill" min="1" max="120" value="85" />
 
-  <label for="premium">Premium:</label>
-  <select id="premium">
-    <option value="no">Não</option>
-    <option value="yes">Sim</option>
-  </select>
+    <label for="weaponType">Tipo de Exercise Weapon:</label>
+    <select id="weaponType">
+      <option value="regular">Regular (500 cargas)</option>
+      <option value="durable">Durable (1800 cargas)</option>
+      <option value="lasting">Lasting (14400 cargas)</option>
+    </select>
 
-  <label for="doubleSkill">
-    <input type="checkbox" id="doubleSkill" />
-    Double Skill ativo (treina 2x mais rápido)
-  </label>
+    <label for="loyalty">Bônus de Lealdade (%):</label>
+    <select id="loyalty">
+      <option value="0">0%</option>
+      <option value="5">5%</option>
+      <option value="10">10%</option>
+      <option value="15">15%</option>
+      <option value="20">20%</option>
+      <option value="25">25%</option>
+      <option value="30">30%</option>
+      <option value="35">35%</option>
+      <option value="40">40%</option>
+      <option value="45">45%</option>
+      <option value="50">50%</option>
+    </select>
 
-  <button id="calcBtn">Calcular</button>
+    <label>
+      <input type="checkbox" id="privateDummy" />
+      Dummy Privado
+    </label>
 
-  <div class="result" id="result">Resultado aparecerá aqui.</div>
+    <label>
+      <input type="checkbox" id="doubleSkill" />
+      Evento de Skill em Dobro
+    </label>
+
+    <button id="calculate">Calcular</button>
+
+    <div class="result" id="result">O resultado aparecerá aqui.</div>
+  </div>
 
   <a href="index.html">&larr; Voltar ao Menu Principal</a>
 
   <script>
-    const calcBtn = document.getElementById('calcBtn');
-    const result = document.getElementById('result');
-
-    const stageMultipliers = [
-      { max: 59, hits: 40 },
-      { max: 69, hits: 16 },
-      { max: 79, hits: 10 },
-      { max: 120, hits: 4 }
-    ];
-
-    const weaponDurability = {
-      normal: 500,
-      durable: 1800,
-      lasting: 14400
-    };
-
-    const baseTimePerHit = {
-      online: 3.5,
-      offline: 6
-    };
-
-    calcBtn.addEventListener('click', () => {
-      let currentSkill = parseInt(document.getElementById('currentSkill').value);
-      let targetSkill = parseInt(document.getElementById('targetSkill').value);
+    document.getElementById('calculate').addEventListener('click', function() {
+      const vocation = document.getElementById('vocation').value;
+      const skillType = document.getElementById('skillType').value;
+      const currentSkill = parseInt(document.getElementById('currentSkill').value);
+      const targetSkill = parseInt(document.getElementById('targetSkill').value);
       const weaponType = document.getElementById('weaponType').value;
-      const trainMode = document.getElementById('trainMode').value;
-      const premium = document.getElementById('premium').value;
+      const loyalty = parseInt(document.getElementById('loyalty').value);
+      const privateDummy = document.getElementById('privateDummy').checked;
       const doubleSkill = document.getElementById('doubleSkill').checked;
+      const resultDiv = document.getElementById('result');
 
-      if (isNaN(currentSkill) || currentSkill < 1 || currentSkill > 120) {
-        result.textContent = 'Informe um Skill Atual válido (1 a 120).';
-        return;
-      }
-      if (isNaN(targetSkill) || targetSkill <= currentSkill || targetSkill > 120) {
-        result.textContent = 'Skill Alvo deve ser maior que Skill Atual e até 120.';
+      if (isNaN(currentSkill) || isNaN(targetSkill) || currentSkill >= targetSkill) {
+        resultDiv.textContent = 'Por favor, insira valores válidos para as skills.';
         return;
       }
 
-      function hitsForSkillPoint(skillLevel) {
-        for (let stage of stageMultipliers) {
-          if (skillLevel <= stage.max) {
-            return stage.hits;
-          }
-        }
-        return 4;
+      let hitsPerLevel;
+      switch(skillType) {
+        case 'magic':
+          hitsPerLevel = 1600;
+          break;
+        case 'melee':
+        case 'distance':
+        case 'shielding':
+          hitsPerLevel = 20; // Valor base, pode ser ajustado conforme necessário
+          break;
+        default:
+          hitsPerLevel = 20;
       }
 
       let totalHits = 0;
-      for (let s = currentSkill; s < targetSkill; s++) {
-        totalHits += hitsForSkillPoint(s);
+      for (let i = currentSkill; i < targetSkill; i++) {
+        totalHits += hitsPerLevel;
+        hitsPerLevel *= 1.1; // Aumento progressivo
       }
 
-      // Double skill divide hits pela metade
-      if (doubleSkill) {
-        totalHits /= 2;
+      // Aplicar modificadores
+      let modifier = 1;
+      if (privateDummy) modifier *= 1.1;
+      if (doubleSkill) modifier *= 2;
+      modifier *= (1 + loyalty / 100);
+
+      totalHits = Math.ceil(totalHits / modifier);
+
+      // Determinar cargas por tipo de arma
+      let charges;
+      switch(weaponType) {
+        case 'regular':
+          charges = 500;
+          break;
+        case 'durable':
+          charges = 1800;
+          break;
+        case 'lasting':
+          charges = 14400;
+          break;
+        default:
+          charges = 500;
       }
 
-      const durability = weaponDurability[weaponType];
-      const weaponsUsed = Math.ceil(totalHits / durability);
-
-      // Tempo por hit considerando modo e premium
-      let timePerHit = baseTimePerHit[trainMode];
-      if (premium === 'yes') timePerHit *= 0.7;
-
+      const weaponsNeeded = Math.ceil(totalHits / charges);
+      const timePerHit = 2; // segundos por hit
       const totalTimeSeconds = totalHits * timePerHit;
+      const hours = Math.floor(totalTimeSeconds / 3600);
+      const minutes = Math.floor((totalTimeSeconds % 3600) / 60);
+      const seconds = totalTimeSeconds % 60;
 
-      function formatTime(seconds) {
-        const h = Math.floor(seconds / 3600);
-        seconds %= 3600;
-        const m = Math.floor(seconds / 60);
-        const s = Math.floor(seconds % 60);
-        return `${h}h ${m}m ${s}s`;
-      }
-
-      result.textContent =
-        `Skill atual: ${currentSkill}\n` +
-        `Skill alvo: ${targetSkill}\n` +
-        `Tipo de Exercise Weapon: ${weaponType.charAt(0).toUpperCase() + weaponType.slice(1)}\n` +
-        `Modo de treino: ${trainMode.charAt(0).toUpperCase() + trainMode.slice(1)}\n` +
-        `Premium: ${premium === 'yes' ? 'Sim' : 'Não'}\n` +
-        `Double Skill ativo: ${doubleSkill ? 'Sim' : 'Não'}\n\n` +
-        `Hits necessários para atingir o skill: ${Math.ceil(totalHits)}\n` +
-        `Quantidade de Exercise Weapons usadas: ${weaponsUsed}\n` +
-        `Tempo estimado para atingir o skill: ${formatTime(totalTimeSeconds)}`;
+      resultDiv.textContent = 
+        `Vocação: ${vocation.charAt(0).toUpperCase() + vocation.slice(1)}\n` +
+        `Tipo de Skill: ${skillType.charAt(0).toUpperCase() + skillType.slice(1)}\n` +
+        `Skill Atual: ${currentSkill}\n` +
+        `Skill Desejado: ${targetSkill}\n` +
+        `Hits Necessários: ${totalHits}\n` +
+        `Exercise Weapons Necessárias: ${weaponsNeeded}\n` +
+        `Tempo Estimado: ${hours}h ${minutes}m ${seconds}s`;
     });
   </script>
 
