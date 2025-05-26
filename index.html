@@ -4,58 +4,112 @@
   <meta charset="UTF-8" />
   <title>Menu Principal - Calculadora de Bônus</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: #0d1117;
-      color: #f0f0f0;
-      font-family: Arial, sans-serif;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #e0e6f0;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #61dafb;
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin-bottom: 50px;
+      text-shadow:
+        0 0 10px #61dafb88,
+        0 0 30px #61dafb66;
+      user-select: none;
+    }
+
+    .btn-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+      width: 100%;
+      max-width: 960px;
+    }
+
+    a.button {
+      position: relative;
+      display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      color: #58a6ff;
-      margin-bottom: 40px;
-      font-weight: 900;
-      text-shadow: 0 0 10px #58a6ff;
-      text-align: center;
-    }
-    .btn-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      max-width: 800px;
-      width: 100%;
-    }
-    a.button {
-      background: #238636;
-      color: white;
+      padding: 18px 32px;
+      background: rgba(255 255 255 / 0.07);
+      border-radius: 16px;
+      box-shadow:
+        0 4px 15px rgba(97, 218, 251, 0.4);
+      color: #61dafb;
+      font-weight: 700;
+      font-size: 1.1rem;
       text-decoration: none;
-      padding: 18px 36px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 16px;
-      box-shadow: 0 0 10px #2ea043;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      flex: 1 1 200px;
-      text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+      transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1.5px solid rgba(97, 218, 251, 0.4);
       user-select: none;
     }
     a.button:hover {
-      background: #2ea043;
-      box-shadow: 0 0 15px #2ea043;
+      background: rgba(97, 218, 251, 0.15);
+      box-shadow:
+        0 8px 24px rgba(97, 218, 251, 0.7);
+      color: #d0f0ff;
     }
+
+    /* Icon style */
+    a.button svg {
+      margin-right: 12px;
+      fill: currentColor;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    a.button:hover svg {
+      transform: translateX(5px);
+    }
+
     footer {
-      margin-top: 50px;
+      margin-top: 70px;
       font-size: 14px;
-      color: #444;
+      color: #a0b9cc88;
       text-align: center;
-      opacity: 0.6;
-      width: 100%;
+      user-select: none;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      a.button {
+        font-size: 1rem;
+        padding: 14px 20px;
+      }
+      a.button svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
     }
   </style>
 </head>
@@ -64,19 +118,46 @@
   <h1>Calculadora de Bônus - Menu Principal</h1>
 
   <div class="btn-container">
-    <a href="addons.html" class="button">Addons</a>
-    <a href="mounts.html" class="button">Montarias</a>
-    <a href="calc_skill_training.html" class="button">Skill Training</a>
-    <a href="calc_level_stats.html" class="button">Level Stats</a>
-    <a href="calc_exp_party.html" class="button">Experiência Party</a>
-    <a href="calc_exp_to_level.html" class="button">EXP para Level</a>
-    <a href="party_share.html" class="button">Party Share</a>
-    <a href="calc_magic_shield.html" class="button">Magic Shield</a>
-    <a href="calc_speed.html" class="button">Velocidade</a>
+    <a href="addons.html" class="button" aria-label="Addons">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15 8H9L12 2Z M12 22L15 16H9L12 22Z M4 10L10 7V17L4 14V10Z M20 10L14 7V17L20 14V10Z"/></svg>
+      Addons
+    </a>
+    <a href="mounts.html" class="button" aria-label="Montarias">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13L7 7L11 13L15 7L19 13"/></svg>
+      Montarias
+    </a>
+    <a href="calc_skill_training.html" class="button" aria-label="Skill Training">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20H20V22H4V20ZM12 2L15 5H9L12 2Z M4 10H20V18H4V10Z"/></svg>
+      Skill Training
+    </a>
+    <a href="calc_level_stats.html" class="button" aria-label="Level Stats">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17L7 13L11 17L15 11L19 15"/></svg>
+      Level Stats
+    </a>
+    <a href="calc_exp_party.html" class="button" aria-label="Experiência Party">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12L7 8L11 12L15 8L19 12"/></svg>
+      Experiência Party
+    </a>
+    <a href="calc_exp_to_level.html" class="button" aria-label="EXP para Level">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L12 22M6 12L18 12"/></svg>
+      EXP para Level
+    </a>
+    <a href="party_share.html" class="button" aria-label="Party Share">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C9 2 6 5 6 8C6 11 9 14 12 14C15 14 18 11 18 8C18 5 15 2 12 2Z"/></svg>
+      Party Share
+    </a>
+    <a href="calc_magic_shield.html" class="button" aria-label="Magic Shield">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5V11C3 16 7 20 12 22C17 20 21 16 21 11V5L12 1Z"/></svg>
+      Magic Shield
+    </a>
+    <a href="calc_speed.html" class="button" aria-label="Velocidade">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12L20 12M12 4L12 20"/></svg>
+      Velocidade
+    </a>
   </div>
 
   <footer>
-    &copy; 2025 - Sua Calculadora de Bônus
+    &copy; 2025 - Sua Calculadora de Bônus — feita com 💙 e tecnologia.
   </footer>
 
 </body>
