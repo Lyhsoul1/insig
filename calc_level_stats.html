@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Vida e Mana por Level - Calculadora de Bônus</title>
+<style>
+  body {
+    background: #0d1117;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  h1 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-top: 20px;
+  }
+  select, input[type=number] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 250px;
+  }
+  button {
+    margin-top: 30px;
+    background: #238636;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #2ea043;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background: #2ea043;
+  }
+  .result {
+    margin-top: 30px;
+    font-size: 20px;
+    background: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 40px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<h1>Calculadora de Vida e Mana por Level</h1>
+
+<label for="level">Selecione o Level do personagem:</label>
+<input type="number" id="level" min="1" max="999" value="100" />
+
+<label for="vocation">Selecione a Vocação:</label>
+<select id="vocation">
+  <option value="knight">Knight</option>
+  <option value="paladin">Paladin</option>
+  <option value="sorcerer">Sorcerer</option>
+  <option value="druid">Druid</option>
+</select>
+
+<button onclick="calcularStats()">Calcular Vida e Mana</button>
+
+<div class="result" id="resultado"></div>
+
+<a href="index.html">&larr; Voltar ao menu principal</a>
+
+<script>
+// Exemplo simplificado de cálculo com base em fórmulas comuns para OTServers
+function calcularStats() {
+  const level = parseInt(document.getElementById('level').value);
+  const voc = document.getElementById('vocation').value;
+  if (isNaN(level) || level < 1) {
+    alert('Insira um level válido');
+    return;
+  }
+
+  // Base HP e MP e incrementos por vocação (valores aproximados, você pode ajustar)
+  let baseHP = 150;
+  let hpPerLevel = 5;
+  let baseMP = 40;
+  let mpPerLevel = 5;
+
+  switch(voc) {
+    case 'knight':
+      baseHP = 185;
+      hpPerLevel = 7;
+      baseMP = 40;
+      mpPerLevel = 3;
+      break;
+    case 'paladin':
+      baseHP = 185;
+      hpPerLevel = 6;
+      baseMP = 40;
+      mpPerLevel = 5;
+      break;
+    case 'sorcerer':
+      baseHP = 150;
+      hpPerLevel = 5;
+      baseMP = 120;
+      mpPerLevel = 9;
+      break;
+    case 'druid':
+      baseHP = 150;
+      hpPerLevel = 5;
+      baseMP = 120;
+      mpPerLevel = 9;
+      break;
+  }
+
+  const hp = baseHP + hpPerLevel * (level - 1);
+  const mp = baseMP + mpPerLevel * (level - 1);
+
+  document.getElementById('resultado').innerHTML = `
+    <strong>Level ${level} - ${voc.charAt(0).toUpperCase() + voc.slice(1)}</strong><br />
+    Vida (HP): <strong>${hp}</strong><br />
+    Mana (MP): <strong>${mp}</strong>
+  `;
+}
+</script>
+
+</body>
+</html>
