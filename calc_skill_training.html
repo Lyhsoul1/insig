@@ -2,63 +2,74 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Calculadora de Skill - Calculadora de Bônus</title>
+  <title>Calculadora de Treino de Skill - Exercise Weapons</title>
   <style>
     body {
       background: #0d1117;
       color: #f0f0f0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 30px 20px;
+      font-family: Arial, sans-serif;
       max-width: 700px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.5;
     }
     h1 {
       color: #58a6ff;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: 0 0 10px #58a6ff;
     }
     label {
       display: block;
-      margin-top: 20px;
+      margin-top: 15px;
+      font-size: 18px;
+      max-width: 300px;
     }
-    input[type=number] {
+    select, input[type="number"], input[type="checkbox"] {
       padding: 8px 12px;
-      font-size: 16px;
       border-radius: 6px;
       border: none;
-      margin-top: 5px;
+      margin-top: 8px;
+      font-size: 16px;
+      color: #222;
       width: 100%;
-      max-width: 200px;
+      max-width: 300px;
     }
     button {
       margin-top: 30px;
-      background: #238636;
-      color: white;
-      border: none;
-      padding: 14px 28px;
+      padding: 12px 25px;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 16px;
       border-radius: 8px;
+      border: none;
+      background-color: #238636;
+      color: white;
       cursor: pointer;
       box-shadow: 0 0 10px #2ea043;
       transition: background-color 0.3s ease;
+      max-width: 320px;
+      width: 100%;
     }
     button:hover {
-      background: #2ea043;
+      background-color: #2ea043;
     }
     .result {
       margin-top: 30px;
-      font-size: 20px;
       background: #161b22;
       padding: 15px;
       border-radius: 8px;
+      font-size: 18px;
       white-space: pre-wrap;
+      min-height: 100px;
     }
     a {
-      color: #58a6ff;
-      text-decoration: none;
-      font-size: 14px;
-      display: inline-block;
+      display: block;
       margin-top: 40px;
+      text-align: center;
+      text-decoration: none;
+      color: #58a6ff;
+      font-weight: bold;
     }
     a:hover {
       text-decoration: underline;
@@ -67,60 +78,138 @@
 </head>
 <body>
 
-  <h1>Calculadora de Skill</h1>
+  <h1>Calculadora de Treino de Skill - Exercise Weapons</h1>
 
-  <label for="currentSkill">Skill atual:</label>
-  <input type="number" id="currentSkill" min="1" max="1200" value="300" />
+  <label for="currentSkill">Skill Atual (1 - 120):</label>
+  <input type="number" id="currentSkill" min="1" max="120" value="30" />
 
-  <label for="targetSkill">Skill alvo:</label>
-  <input type="number" id="targetSkill" min="1" max="1200" value="350" />
+  <label for="targetSkill">Skill Alvo (maior que Atual):</label>
+  <input type="number" id="targetSkill" min="1" max="120" value="80" />
 
-  <button onclick="calcularSkill()">Calcular experiência necessária</button>
+  <label for="weaponType">Tipo de Exercise Weapon:</label>
+  <select id="weaponType">
+    <option value="normal">Normal (200 hits)</option>
+    <option value="durable">Durable (400 hits)</option>
+    <option value="lasting">Lasting (800 hits)</option>
+  </select>
 
-  <div class="result" id="resultado"></div>
+  <label for="trainMode">Modo de Treino:</label>
+  <select id="trainMode">
+    <option value="online">Online</option>
+    <option value="offline">Offline (estátua)</option>
+  </select>
 
-  <a href="index.html">&larr; Voltar ao menu principal</a>
+  <label for="premium">Premium:</label>
+  <select id="premium">
+    <option value="no">Não</option>
+    <option value="yes">Sim</option>
+  </select>
 
-<script>
-  // Retorna o multiplicador de experiência por ponto de skill conforme faixa
-  function skillExpPerPoint(skill) {
-    if (skill >= 1 && skill <= 59) return 40;
-    if (skill >= 60 && skill <= 69) return 16;
-    if (skill >= 70 && skill <= 79) return 10;
-    if (skill >= 80) return 4;
-    return 0;
-  }
+  <label for="excited">
+    <input type="checkbox" id="excited" />
+    Treinando excitado (velocidade reduzida)
+  </label>
 
-  function calcularSkill() {
-    const current = parseInt(document.getElementById('currentSkill').value);
-    const target = parseInt(document.getElementById('targetSkill').value);
+  <button id="calcBtn">Calcular</button>
 
-    if (isNaN(current) || isNaN(target) || current < 1 || target <= current) {
-      alert('Valores inválidos: o skill alvo deve ser maior que o atual e ambos >= 1.');
-      return;
-    }
+  <div class="result" id="result">Resultado aparecerá aqui.</div>
 
-    let neededExp = 0;
-    let skillPointer = current;
+  <a href="index.html">&larr; Voltar ao Menu Principal</a>
 
-    while (skillPointer < target) {
-      let stageEnd;
-      if (skillPointer < 59) stageEnd = Math.min(59, target);
-      else if (skillPointer < 69) stageEnd = Math.min(69, target);
-      else if (skillPointer < 79) stageEnd = Math.min(79, target);
-      else stageEnd = target;
+  <script>
+    const calcBtn = document.getElementById('calcBtn');
+    const result = document.getElementById('result');
 
-      let points = stageEnd - skillPointer;
-      let multiplier = skillExpPerPoint(skillPointer + 1); // skill do próximo ponto
+    const stageMultipliers = [
+      { max: 59, hits: 40 },
+      { max: 69, hits: 16 },
+      { max: 79, hits: 10 },
+      { max: 120, hits: 4 } // Para skill 80 em diante
+    ];
 
-      neededExp += points * multiplier;
-      skillPointer = stageEnd;
-    }
+    const weaponDurability = {
+      normal: 200,
+      durable: 400,
+      lasting: 800
+    };
 
-    document.getElementById('resultado').textContent = 
-      `Para subir do skill ${current} ao skill ${target},\nvocê precisa de ${neededExp.toLocaleString()} pontos de experiência.`;
-  }
-</script>
+    const baseTimePerHit = 1.5; // segundos por hit
+
+    calcBtn.addEventListener('click', () => {
+      let currentSkill = parseInt(document.getElementById('currentSkill').value);
+      let targetSkill = parseInt(document.getElementById('targetSkill').value);
+      const weaponType = document.getElementById('weaponType').value;
+      const trainMode = document.getElementById('trainMode').value;
+      const premium = document.getElementById('premium').value;
+      const excited = document.getElementById('excited').checked;
+
+      if (isNaN(currentSkill) || currentSkill < 1 || currentSkill > 120) {
+        result.textContent = 'Informe um Skill Atual válido (1 a 120).';
+        return;
+      }
+      if (isNaN(targetSkill) || targetSkill <= currentSkill || targetSkill > 120) {
+        result.textContent = 'Skill Alvo deve ser maior que Skill Atual e até 120.';
+        return;
+      }
+
+      // Calcula hits necessários para subir do skill atual até o alvo
+      function hitsForSkillRange(start, end) {
+        let hits = 0;
+        let s = start;
+
+        while (s < end) {
+          let stage = stageMultipliers.find(stage => s <= stage.max);
+          hits += stage.hits;
+          s++;
+        }
+        return hits;
+      }
+
+      const totalHits = hitsForSkillRange(currentSkill, targetSkill);
+
+      // Durabilidade da arma
+      const durability = weaponDurability[weaponType];
+
+      // Quantas armas serão gastas
+      const weaponsUsed = Math.ceil(totalHits / durability);
+
+      // Modificadores de tempo
+      let timeModifier = 1; // base
+
+      // Treino offline é mais lento
+      if (trainMode === 'offline') timeModifier *= 1.3;
+
+      // Premium é mais rápido
+      if (premium === 'yes') timeModifier *= 0.8;
+
+      // Treino excitado reduz velocidade (mais lento)
+      if (excited) timeModifier *= 1.5;
+
+      // Tempo total em segundos
+      const totalTimeSeconds = totalHits * baseTimePerHit * timeModifier;
+
+      // Converter tempo para horas, minutos e segundos
+      function formatTime(seconds) {
+        const h = Math.floor(seconds / 3600);
+        seconds %= 3600;
+        const m = Math.floor(seconds / 60);
+        const s = Math.floor(seconds % 60);
+        return `${h}h ${m}m ${s}s`;
+      }
+
+      result.textContent =
+        `Skill atual: ${currentSkill}\n` +
+        `Skill alvo: ${targetSkill}\n` +
+        `Tipo de Exercise Weapon: ${weaponType.charAt(0).toUpperCase() + weaponType.slice(1)}\n` +
+        `Modo de treino: ${trainMode.charAt(0).toUpperCase() + trainMode.slice(1)}\n` +
+        `Premium: ${premium === 'yes' ? 'Sim' : 'Não'}\n` +
+        `Treinando excitado: ${excited ? 'Sim' : 'Não'}\n\n` +
+
+        `Hits necessários para atingir o skill: ${totalHits}\n` +
+        `Quantidade de Exercise Weapons usadas: ${weaponsUsed}\n` +
+        `Tempo estimado para atingir o skill: ${formatTime(totalTimeSeconds)}`;
+    });
+  </script>
 
 </body>
 </html>
