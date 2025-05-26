@@ -2,123 +2,124 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Menu Principal - Calculadora de Bônus</title>
+  <title>Calculadora de Level e Vida - Calculadora de Bônus</title>
   <style>
     body {
       background: #0d1117;
       color: #f0f0f0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-      margin: 0;
+      padding: 30px 20px;
+      max-width: 700px;
+      margin: auto;
     }
-
     h1 {
       color: #58a6ff;
-      margin-bottom: 10px;
-      font-size: 36px;
+      margin-bottom: 20px;
     }
-
-    p.sub {
-      color: #8b949e;
-      margin-bottom: 40px;
+    label {
+      display: block;
+      margin-top: 20px;
+    }
+    input[type=number] {
+      padding: 8px 12px;
       font-size: 16px;
-    }
-
-    .section {
-      margin-bottom: 40px;
+      border-radius: 6px;
+      border: none;
+      margin-top: 5px;
       width: 100%;
-      max-width: 800px;
+      max-width: 200px;
     }
-
-    h2 {
-      color: #58a6ff;
-      font-size: 24px;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 5px;
-    }
-
-    .btn-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    a.button {
+    button {
+      margin-top: 30px;
       background: #238636;
       color: white;
-      text-decoration: none;
-      padding: 16px 28px;
-      border-radius: 8px;
+      border: none;
+      padding: 14px 28px;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
       box-shadow: 0 0 10px #2ea043;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      flex: 1 1 200px;
-      text-align: center;
+      transition: background-color 0.3s ease;
     }
-
-    a.button:hover {
+    button:hover {
       background: #2ea043;
-      box-shadow: 0 0 15px #2ea043;
     }
-
-    footer {
-      margin-top: 50px;
+    .result {
+      margin-top: 30px;
+      font-size: 20px;
+      background: #161b22;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    a {
+      color: #58a6ff;
+      text-decoration: none;
       font-size: 14px;
-      color: #6e7681;
+      display: inline-block;
+      margin-top: 40px;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <h1>Calculadora de Bônus</h1>
-  <p class="sub">Ferramentas úteis para seu personagem e sua party</p>
+  <h1>Calculadora de Level e Vida</h1>
 
-  <!-- Seção Addons e Montarias -->
-  <div class="section">
-    <h2>Bônus</h2>
-    <div class="btn-container">
-      <a href="addons.html" class="button">Addons</a>
-      <a href="mounts.html" class="button">Montarias</a>
-    </div>
-  </div>
+  <label for="level">Digite seu level:</label>
+  <input type="number" id="level" min="1" max="999" value="100" />
 
-  <!-- Seção Level e Status -->
-  <div class="section">
-    <h2>Status por Level</h2>
-    <div class="btn-container">
-      <a href="calc_level_stats.html" class="button">Vida/Mana por Level</a>
-      <a href="calc_speed.html" class="button">Velocidade</a>
-      <a href="calc_magic_shield.html" class="button">Magic Shield %</a>
-    </div>
-  </div>
+  <label for="baseHealth">Vida base (sem bônus):</label>
+  <input type="number" id="baseHealth" min="1" value="200" />
 
-  <!-- Seção Party e EXP -->
-  <div class="section">
-    <h2>Party & Experiência</h2>
-    <div class="btn-container">
-      <a href="party_share.html" class="button">Nível para Share</a>
-      <a href="calc_exp_party.html" class="button">EXP Party</a>
-      <a href="calc_exp_target.html" class="button">Quanto falta até o Level X</a>
-    </div>
-  </div>
+  <label for="bonusPercent">Bônus de vida (%):</label>
+  <input type="number" id="bonusPercent" min="0" value="0" />
 
-  <!-- Seção Skills -->
-  <div class="section">
-    <h2>Skills</h2>
-    <div class="btn-container">
-      <a href="calc_skill_training.html" class="button">Training de Skill</a>
-      <a href="calc_magic_level.html" class="button">Treino de Magic Level</a>
-    </div>
-  </div>
+  <button onclick="calcularVida()">Calcular Vida Total</button>
 
-  <footer>
-    Desenvolvido por você &mdash; Última atualização: 2025
-  </footer>
+  <div class="result" id="resultado"></div>
+
+  <a href="index.html">&larr; Voltar ao menu principal</a>
+
+  <script>
+    // Exemplo simples: Vida total = vida base + bônus percentual
+    // Também mostra uma estimativa de HP baseado no level (fórmula genérica)
+    function calcularVida() {
+      const level = parseInt(document.getElementById('level').value);
+      const baseHealth = parseInt(document.getElementById('baseHealth').value);
+      const bonusPercent = parseFloat(document.getElementById('bonusPercent').value);
+
+      if (isNaN(level) || level < 1) {
+        alert('Informe um level válido.');
+        return;
+      }
+      if (isNaN(baseHealth) || baseHealth < 1) {
+        alert('Informe uma vida base válida.');
+        return;
+      }
+      if (isNaN(bonusPercent) || bonusPercent < 0) {
+        alert('Informe um bônus percentual válido.');
+        return;
+      }
+
+      // Vida total = baseHealth + (baseHealth * bonusPercent / 100)
+      const vidaTotal = baseHealth + (baseHealth * bonusPercent / 100);
+
+      // Exemplo: Vida base pode aumentar com level
+      // Vamos supor +5 HP por level (exemplo genérico)
+      const vidaPorLevel = level * 5;
+
+      const vidaFinal = vidaTotal + vidaPorLevel;
+
+      document.getElementById('resultado').innerHTML = `
+        Para level <strong>${level}</strong>,<br />
+        com vida base <strong>${baseHealth}</strong> e bônus de <strong>${bonusPercent}%</strong>,<br />
+        sua vida total estimada será: <strong>${Math.round(vidaFinal)}</strong> HP.
+      `;
+    }
+  </script>
 
 </body>
 </html>
