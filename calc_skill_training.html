@@ -164,7 +164,304 @@
   <pre id="result">Resultado aparecerá aqui.</pre>
 
   <script>
-    // Código JS será enviado a seguir
+(() => {
+  const vocations = {
+    knight: {
+      name: 'Knight',
+      // Fist, Sword/Axe/Club, Distance, Magic
+      skillRates: {
+        fist: 2,
+        sword: 2,
+        distance: 1.5,
+        magic: 0.03,
+      },
+    },
+    paladin: {
+      name: 'Paladin',
+      skillRates: {
+        fist: 2,
+        sword: 1.5,
+        distance: 2,
+        magic: 0.5,
+      },
+    },
+    sorcerer: {
+      name: 'Sorcerer',
+      skillRates: {
+        fist: 0.03,
+        sword: 0.03,
+        distance: 0.03,
+        magic: 3,
+      },
+    },
+    druid: {
+      name: 'Druid',
+      skillRates: {
+        fist: 0.03,
+        sword: 0.03,
+        distance: 0.03,
+        magic: 3,
+      },
+    },
+  };
+
+  const weaponCharges = {
+    normal: 500,
+    durable: 1800,
+    lasting: 14400,
+  };
+
+  const timePerHit = {
+    online: 3.5,  // em segundos
+    offline: 6,
+  };
+
+  // Calcula XP necessário para skill X -> X+1, fórmula oficial Tibia global (exemplo):
+  // xp = 50 * level^3 - 150 * level^2 + 400 * level
+  function xpForSkill(level) {
+    return Math.floor(50 * Math.pow(level, 3) - 150 * Math.pow(level, 2) + 400 * level);
+  }
+
+  // Calcula hits necessários para subir skill 1 ponto inteiro
+  // Para os skills principais, pegamos a taxa da vocação (hits inverso ao skill rate)
+  // Para Magic Level, usamos regra especial, pois ML usa XP, não hits
+
+  // Para Magic Level, xp total necessário:
+  // Soma XP de skill atual + % atual até skill alvo (inteiro)
+  // Depois divide hits por xp por dano por hit (baseado na rate, dummy e double skill)
+
+  // Função para converter skill + % atual para XP total acumulado
+  function skillPercentToXP(skill, percent) {
+    // Skill é inteiro, percent é 0 a 99
+    let baseXP = 0;
+    for (let i = 1; i < skill; i++) {
+      baseXP += xpForSkill(i);
+    }
+    baseXP += Math.floor((xpForSkill(skill) * percent) / 100);
+    return baseXP;
+  }
+
+  // Função para converter XP para skill + % (não usada aqui, só para referência)
+  function xpToSkillPercent(xp) {
+    let skill = 1;
+    let xpTotal = 0;
+    while (skill < 120 && xp >= xpTotal + xpForSkill(skill)) {
+      xpTotal += xpForSkill(skill);
+      skill++;
+    }
+    let percent = Math.floor(((xp - xpTotal) * 100) / xpForSkill(skill));
+    return { skill, percent };
+  }
+
+  // Cálculo hits para skills de combate (não Magic)
+  function hitsForSkillPoint(vocation, skillType, skillLevel) {
+    // skillRate é uma base que indica hits para subir 1 skill em 1 nível
+    // rates aproximados baseados no global, ajustados para o jogo original
+    // Quanto menor o skillRate, mais rápido o skill sobe (druids magos tem skillRate 0.3 por ex)
+    const rates = {
+      knight: { fist: 4, sword: 4, distance: 6, magic: 0 },
+      paladin: { fist: 4, sword: 6, distance: 4, magic: 0 },
+      sorcerer: { fist: 50, sword: 50, distance: 50, magic: 1 },
+      druid: { fist: 50, sword: 50, distance: 50, magic: 1 },
+    };
+
+    if (skillType === 'magic') return 0;
+
+    // fórmula aproximada
+    // O hits por skill point aumenta conforme o skill level aumenta (skill leve até 30-40)
+    // para simular isso, pegamos uma base e multiplicamos por fator de skillLevel
+    // (isso é simplificado)
+    const baseHits = rates[vocation][skillType] || 50;
+
+    // aumentar hits conforme o skill sobe, para simular dificuldade
+    let factor = 1 + (skillLevel - 30) * 0.05;
+    if (factor < 1) factor = 1;
+
+    return Math.floor(baseHits * factor);
+  }
+
+  // Função principal
+  function calculate() {
+    const vocation = document.getElementById('vocation').value;
+    const skillType = document.getElementById('skillType').value;
+    let currentSkill = parseInt(document.getElementById('currentSkill').value);
+    let currentPercent = parseInt(document.getElementById('currentPercent').value);
+    let targetSkill = parseInt(document.getElementById('targetSkill').value);
+    const weaponType = document.getElementById('weaponType').value;
+    const loyaltyBonus = parseInt(document.getElementById('loyalty').value) / 100;
+    const dummy = document.getElementById('dummy').checked;
+    const doubleSkill = document.getElementById('doubleSkill').checked;
+
+    if (
+      isNaN(currentSkill) || isNaN(currentPercent) || isNaN(targetSkill) ||
+      currentSkill < 1 || currentSkill > 120 || targetSkill < 1 || targetSkill > 120 ||
+      currentPercent < 0 || currentPercent > 99 || targetSkill <= currentSkill
+    ) {
+      alert('Por favor, preencha corretamente os valores de skill e porcentagem.');
+      return;
+    }
+
+    // Cálculo de hits necessário
+
+    // Para Magic Level
+    if (skillType === 'magic') {
+      // XP total para skill atual + %
+      const xpAtual = skillPercentToXP(currentSkill, currentPercent);
+      const xpAlvo = skillPercentToXP(targetSkill, 0);
+      const xpNecessario = xpAlvo - xpAtual;
+
+      // Skill rate base (hits por XP unitário) varia por vocação
+      // Druid/sorcerer: 1 hit / 15 xp (mais rápido)
+      // Knight: 1 hit / 0.3 xp (muito lento)
+      // Paladin: 1 hit / 1.5 xp (intermediário)
+      // Valores aproximados baseados no global tibia
+
+      let xpPerHit;
+      switch (vocation) {
+        case 'knight': xpPerHit = 0.3; break; // 1 hit = 0.3 XP, ou seja muitos hits
+        case 'paladin': xpPerHit = 1.5; break;
+        case 'sorcerer':
+        case 'druid':
+          xpPerHit = 15;
+          break;
+        default:
+          xpPerHit = 1;
+      }
+
+      // Ajusta xpPerHit pela lealdade (loyalty) e double skill event
+      let skillMultiplier = 1 + loyaltyBonus;
+      if (doubleSkill) skillMultiplier *= 2;
+
+      // Hits necessário ajustado
+      const hitsNeeded = Math.ceil(xpNecessario / (xpPerHit * skillMultiplier));
+
+      // Cálculo de armas necessárias
+      const charges = weaponCharges[weaponType];
+      // hits por carga, assumindo 1 hit consome 1 carga
+      let hitsPerCharge = 1;
+
+      // Tempo por hit em segundos (offline = dummy true, online = false)
+      const timePerHitSeconds = dummy ? timePerHit.offline : timePerHit.online;
+
+      const weaponsNeeded = Math.ceil(hitsNeeded / charges);
+      const totalSeconds = hitsNeeded * timePerHitSeconds;
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      // Custos aproximados (opcional)
+      // 1 lasting weapon custa 770k
+      // 1 normal weapon custa 100k
+      // para dar um valor aproximado:
+      let weaponCost = 0;
+      if (weaponType === 'lasting') weaponCost = 770000;
+      else if (weaponType === 'normal') weaponCost = 100000;
+      else if (weaponType === 'durable') weaponCost = 350000;
+
+      const totalCost = weaponCost * weaponsNeeded;
+
+      displayResult({
+        vocation,
+        skillType,
+        currentSkill,
+        currentPercent,
+        targetSkill,
+        hitsNeeded,
+        weaponsNeeded,
+        hours,
+        minutes,
+        seconds,
+        totalCost,
+        weaponType,
+      });
+
+      return;
+    }
+
+    // Para skills de combate (fist, sword, distance)
+
+    let totalHits = 0;
+
+    // Soma hits para cada skill level de current até target
+    // usando hitsForSkillPoint para estimar hits por skill level
+    for (let lvl = currentSkill; lvl < targetSkill; lvl++) {
+      totalHits += hitsForSkillPoint(vocation, skillType, lvl);
+    }
+
+    // Ajuste hits pela % atual
+    totalHits = totalHits - Math.floor(hitsForSkillPoint(vocation, skillType, currentSkill) * (currentPercent / 100));
+
+    // Ajusta hits pela loyalty e double skill
+    let skillMultiplier = 1 + loyaltyBonus;
+    if (doubleSkill) skillMultiplier *= 2;
+
+    const hitsNeeded = Math.ceil(totalHits / skillMultiplier);
+
+    const charges = weaponCharges[weaponType];
+    const weaponsNeeded = Math.ceil(hitsNeeded / charges);
+
+    // Tempo estimado
+    const timePerHitSeconds = dummy ? timePerHit.offline : timePerHit.online;
+    const totalSeconds = hitsNeeded * timePerHitSeconds;
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+
+    // Custos aproximados
+    let weaponCost = 0;
+    if (weaponType === 'lasting') weaponCost = 770000;
+    else if (weaponType === 'normal') weaponCost = 100000;
+    else if (weaponType === 'durable') weaponCost = 350000;
+
+    const totalCost = weaponCost * weaponsNeeded;
+
+    displayResult({
+      vocation,
+      skillType,
+      currentSkill,
+      currentPercent,
+      targetSkill,
+      hitsNeeded,
+      weaponsNeeded,
+      hours,
+      minutes,
+      seconds,
+      totalCost,
+      weaponType,
+    });
+  }
+
+  function displayResult(data) {
+    const voc = vocations[data.vocation].name;
+    const skillNames = {
+      fist: 'Fist Fighting',
+      sword: 'Sword/Axe/Club',
+      distance: 'Distance Fighting',
+      magic: 'Magic Level',
+    };
+    const weaponNames = {
+      normal: 'Normal (500 cargas)',
+      durable: 'Durable (1800 cargas)',
+      lasting: 'Lasting (14400 cargas)',
+    };
+
+    const res = 
+`Vocação: ${voc}
+Tipo de Skill: ${skillNames[data.skillType]}
+Skill Atual: ${data.currentSkill}.${data.currentPercent.toString().padStart(2,'0')}
+Skill Desejado: ${data.targetSkill}
+
+Hits Necessários: ${data.hitsNeeded.toLocaleString()}
+Exercise Weapons Necessárias: ${data.weaponsNeeded}x ${weaponNames[data.weaponType]}
+Tempo Estimado: ${data.hours}h ${data.minutes}m ${data.seconds.toFixed(0)}s
+Custo Aproximado: ${data.totalCost.toLocaleString()} gp`;
+
+    document.getElementById('result').textContent = res;
+  }
+
+  document.getElementById('calculateBtn').addEventListener('click', calculate);
+})();
+
   </script>
 
 </body>
