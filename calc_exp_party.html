@@ -1,105 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<title>Calculadora de EXP Party - Calculadora de Bônus</title>
-<style>
-  body {
-    background: #0d1117;
-    color: #f0f0f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 30px 20px;
-    max-width: 700px;
-    margin: auto;
-  }
-  h1 {
-    color: #58a6ff;
-    margin-bottom: 20px;
-  }
-  label {
-    display: block;
-    margin-top: 20px;
-  }
-  input[type=number] {
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: none;
-    margin-top: 5px;
-    width: 100%;
-    max-width: 250px;
-  }
-  button {
-    margin-top: 30px;
-    background: #238636;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 0 10px #2ea043;
-    transition: background-color 0.3s ease;
-  }
-  button:hover {
-    background: #2ea043;
-  }
-  .result {
-    margin-top: 30px;
-    font-size: 20px;
-    background: #161b22;
-    padding: 15px;
-    border-radius: 8px;
-  }
-  a {
-    color: #58a6ff;
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 40px;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <title>Experiência Compartilhada (Party Share)</title>
+  <style>
+    body {
+      background: #0d1117;
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    h1 {
+      color: #58a6ff;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: 0 0 10px #58a6ff;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 18px;
+      max-width: 300px;
+    }
+    select, input {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: none;
+      margin-top: 8px;
+      font-size: 16px;
+      color: #222;
+      width: 100%;
+      max-width: 300px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #238636;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px #2ea043;
+      transition: background-color 0.3s ease;
+      max-width: 320px;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #2ea043;
+    }
+    .result {
+      margin-top: 30px;
+      background: #161b22;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 18px;
+      white-space: pre-wrap;
+      min-height: 60px;
+    }
+    a {
+      display: block;
+      margin-top: 50px;
+      text-align: center;
+      text-decoration: none;
+      color: #58a6ff;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Calculadora de EXP para Party</h1>
+  <h1>Experiência Compartilhada (Party Share)</h1>
 
-<label for="totalExp">Experiência total do monstro:</label>
-<input type="number" id="totalExp" min="0" value="10000" />
+  <label for="numMembers">Número de membros na party (1 a 6):</label>
+  <input type="number" id="numMembers" min="1" max="6" value="4" />
 
-<label for="numPlayers">Número de jogadores na party:</label>
-<input type="number" id="numPlayers" min="1" max="20" value="5" />
+  <label for="numVocations">Número de vocações diferentes na party (1 a 6):</label>
+  <input type="number" id="numVocations" min="1" max="6" value="3" />
 
-<button onclick="calcularExpParty()">Calcular EXP por jogador</button>
+  <label for="monsterExp">Experiência base do monstro (XP):</label>
+  <input type="number" id="monsterExp" min="1" value="1000" />
 
-<div class="result" id="resultado"></div>
+  <button id="btnCalc">Calcular Exp. Compartilhada</button>
 
-<a href="index.html">&larr; Voltar ao menu principal</a>
+  <div class="result" id="resultado">Resultado aparecerá aqui.</div>
+
+  <a href="index.html">&larr; Voltar ao Menu Principal</a>
 
 <script>
-function calcularExpParty() {
-  const totalExp = parseInt(document.getElementById('totalExp').value);
-  const numPlayers = parseInt(document.getElementById('numPlayers').value);
+  const btnCalc = document.getElementById('btnCalc');
+  const resultado = document.getElementById('resultado');
 
-  if (isNaN(totalExp) || totalExp < 0) {
-    alert('Informe uma EXP válida.');
-    return;
-  }
-  if (isNaN(numPlayers) || numPlayers < 1) {
-    alert('Informe um número válido de jogadores.');
-    return;
-  }
+  btnCalc.addEventListener('click', () => {
+    let members = parseInt(document.getElementById('numMembers').value);
+    let vocations = parseInt(document.getElementById('numVocations').value);
+    let baseExp = parseInt(document.getElementById('monsterExp').value);
 
-  const expPerPlayer = totalExp / numPlayers;
+    if(isNaN(members) || members < 1) members = 1;
+    if(members > 6) members = 6;
 
-  document.getElementById('resultado').innerHTML = `
-    Cada jogador receberá <strong>${expPerPlayer.toFixed(2)}</strong> de EXP.
-  `;
-}
+    if(isNaN(vocations) || vocations < 1) vocations = 1;
+    if(vocations > 6) vocations = 6;
+
+    if(isNaN(baseExp) || baseExp < 1) {
+      resultado.textContent = 'Informe uma experiência base válida.';
+      return;
+    }
+
+    // Bônus base por vocações
+    let baseBonusPercent = 20; // 1 vocação default
+    if(vocations == 1) baseBonusPercent = 20;
+    else if(vocations == 2) baseBonusPercent = 30;
+    else if(vocations == 3) baseBonusPercent = 60;
+    else if(vocations >= 4) baseBonusPercent = 150;
+
+    // Bônus extra progressivo 2% por membro até máximo 10%
+    let extraBonusPercent = Math.min(members * 2, 10);
+
+    // Exp total com bônus
+    let totalBonusPercent = baseBonusPercent + extraBonusPercent;
+
+    // Calculo do XP total da party
+    let totalPartyExp = baseExp * (1 + totalBonusPercent / 100);
+
+    // Divisor para XP individual:
+    // Se members == 6 e vocations >=4, divisor é 4
+    // Senão, divisor = members
+    let divisor = members;
+    if(members == 6 && vocations >= 4) divisor = 4;
+
+    // XP individual
+    let individualExp = totalPartyExp / divisor;
+
+    resultado.textContent =
+      `Party de ${members} membros com ${vocations} vocação(ões) diferente(s)\n` +
+      `XP base do monstro: ${baseExp}\n` +
+      `Bônus base por vocações: +${baseBonusPercent}%\n` +
+      `Bônus extra por membros (+2% por membro, max 10%): +${extraBonusPercent}%\n` +
+      `XP total com bônus: ${totalPartyExp.toFixed(2)}\n` +
+      `Dividido entre ${divisor} membro(s)\n` +
+      `XP individual por membro: ${individualExp.toFixed(2)}\n\n` +
+      `Obs: Se 6 membros e 4+ vocações, divisão feita como se fossem 4 membros.`;
+  });
 </script>
 
 </body>
