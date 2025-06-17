@@ -2,11 +2,11 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu Principal - Calculadora de Bônus</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
-    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -55,8 +55,7 @@
       padding: 18px 32px;
       background: rgba(255 255 255 / 0.07);
       border-radius: 16px;
-      box-shadow:
-        0 4px 15px rgba(97, 218, 251, 0.4);
+      box-shadow: 0 4px 15px rgba(97, 218, 251, 0.4);
       color: #61dafb;
       font-weight: 700;
       font-size: 1.1rem;
@@ -68,10 +67,10 @@
       border: 1.5px solid rgba(97, 218, 251, 0.4);
       user-select: none;
     }
+
     a.button:hover {
       background: rgba(97, 218, 251, 0.15);
-      box-shadow:
-        0 8px 24px rgba(97, 218, 251, 0.7);
+      box-shadow: 0 8px 24px rgba(97, 218, 251, 0.7);
       color: #d0f0ff;
     }
 
@@ -83,6 +82,7 @@
       flex-shrink: 0;
       transition: transform 0.3s ease;
     }
+
     a.button:hover svg {
       transform: translateX(5px);
     }
@@ -117,45 +117,48 @@
 
   <div class="btn-container">
     <a href="addons.html" class="button" aria-label="Addons">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15 8H9L12 2Z M12 22L15 16H9L12 22Z M4 10L10 7V17L4 14V10Z M20 10L14 7V17L20 14V10Z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2L15 8H9L12 2Z M12 22L15 16H9L12 22Z M4 10L10 7V17L4 14V10Z M20 10L14 7V17L20 14V10Z"/></svg>
       Addons
     </a>
     <a href="mounts.html" class="button" aria-label="Montarias">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13L7 7L11 13L15 7L19 13"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M3 13L7 7L11 13L15 7L19 13"/></svg>
       Montarias
     </a>
     <a href="calc_skill_training.html" class="button" aria-label="Skill Training">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20H20V22H4V20ZM12 2L15 5H9L12 2Z M4 10H20V18H4V10Z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M4 20H20V22H4V20ZM12 2L15 5H9L12 2Z M4 10H20V18H4V10Z"/></svg>
       Skill Training
     </a>
     <a href="calc_level_stats.html" class="button" aria-label="Level Stats">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17L7 13L11 17L15 11L19 15"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M3 17L7 13L11 17L15 11L19 15"/></svg>
       Level Stats
     </a>
     <a href="calc_exp_party.html" class="button" aria-label="Experiência Party">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12L7 8L11 12L15 8L19 12"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M3 12L7 8L11 12L15 8L19 12"/></svg>
       Experiência Party
     </a>
     <a href="calc_exp_to_level.html" class="button" aria-label="EXP para Level">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L12 22M6 12L18 12"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2L12 22M6 12L18 12"/></svg>
       EXP para Level
     </a>
     <a href="party_share.html" class="button" aria-label="Party Share">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C9 2 6 5 6 8C6 11 9 14 12 14C15 14 18 11 18 8C18 5 15 2 12 2Z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2C9 2 6 5 6 8C6 11 9 14 12 14C15 14 18 11 18 8C18 5 15 2 12 2Z"/></svg>
       Party Share
     </a>
     <a href="calc_magic_shield.html" class="button" aria-label="Magic Shield">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5V11C3 16 7 20 12 22C17 20 21 16 21 11V5L12 1Z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5V11C3 16 7 20 12 22C17 20 21 16 21 11V5L12 1Z"/></svg>
       Magic Shield
     </a>
     <a href="calc_speed.html" class="button" aria-label="Velocidade">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12L20 12M12 4L12 20"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M4 12L20 12M12 4L12 20"/></svg>
       Velocidade
     </a>
-    <!-- NOVO BOTÃO: XP por Tempo -->
     <a href="xp-tempo.html" class="button" aria-label="XP por Tempo">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2A10 10 0 1 0 22 12 10.01 10.01 0 0 0 12 2Zm1 11h5v-2h-4V7h-2v6a1 1 0 0 0 1 1Z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10.01 10.01 0 0 0 12 2Zm1 11h5v-2h-4V7h-2v6a1 1 0 0 0 1 1Z"/></svg>
       XP por Tempo
+    </a>
+    <a href="stamina_regen.html" class="button" aria-label="Stamina Regen">
+      <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 1 0 22 12 10 10 0 0 0 12 2ZM13 7H11V13H17V11H13V7Z"/></svg>
+      Regen de Stamina
     </a>
   </div>
 
