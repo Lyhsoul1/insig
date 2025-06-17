@@ -45,8 +45,8 @@
       color: #00ff00;
       box-shadow: 0 0 8px #000;
     }
-    #voltar {
-      margin-bottom: 20px;
+    button {
+      margin: 5px 10px 10px 0;
       padding: 8px 16px;
       cursor: pointer;
       border-radius: 5px;
@@ -57,14 +57,14 @@
       box-shadow: 0 0 5px #4a7bd5;
       transition: background-color 0.3s ease;
     }
-    #voltar:hover {
+    button:hover {
       background-color: #3a7bd5;
     }
   </style>
 </head>
 <body>
 
-  <button id="voltar" onclick="window.location.href='index.html'">← Voltar ao Menu</button>
+  <button onclick="window.location.href='index.html'">← Voltar ao Menu</button>
 
   <h1>Calculadora de Bônus de Addons</h1>
 
@@ -74,6 +74,12 @@
   <label>
     <input type="radio" name="genero" value="female"> Feminino ♀
   </label>
+
+  <div style="margin-top: 10px; margin-bottom: 10px;">
+    <button onclick="selecionarTodos()">Selecionar Todos</button>
+    <button onclick="selecionarSkill()">Selecionar Apenas Skill</button>
+    <button onclick="desmarcarTodos()">Desmarcar Todos</button>
+  </div>
 
   <div id="addons">Carregando addons...</div>
 
@@ -134,6 +140,32 @@
       });
 
       document.getElementById('resultado').textContent = JSON.stringify(total, null, 2);
+    }
+
+    function selecionarTodos() {
+      document.querySelectorAll('#addons input[type=checkbox]').forEach(cb => {
+        cb.checked = true;
+      });
+      atualizarBonus();
+    }
+
+    function desmarcarTodos() {
+      document.querySelectorAll('#addons input[type=checkbox]').forEach(cb => {
+        cb.checked = false;
+      });
+      atualizarBonus();
+    }
+
+    function selecionarSkill() {
+      document.querySelectorAll('#addons .addon-item').forEach(div => {
+        const cb = div.querySelector('input[type=checkbox]');
+        if (div.classList.contains('vocation-skill')) {
+          cb.checked = true;
+        } else {
+          cb.checked = false;
+        }
+      });
+      atualizarBonus();
     }
 
     function capitalize(txt) {
